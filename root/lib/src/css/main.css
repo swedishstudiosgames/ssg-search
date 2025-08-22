@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 body{font-family:'Poppings',sans-serif;}
-h1 .sb{text-align:center;color:blue;}
+h1{text-align:center;color:blue;}
 .qf{max-width:640px;margin:25% auto;}
 .qw{position:relative;}
 .qi{width:100%;box-sizing:border-box;padding:12px 72px 12px 14px;border:1px solid #d0d4d9;border-radius:8px;font-size:16px;line-height:1.2;transition:border-color .15s ease, box-shadow .15s ease;}
