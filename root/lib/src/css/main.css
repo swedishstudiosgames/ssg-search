@@ -1,1 +1,13 @@
-
+body{font-family:'Poppings',sans-serif;background:radial-gradient(#fff,#111);margin:0px;}
+.qf{max-width:640px;margin-left:18%;}
+.qw{position:relative;}
+.qi{width:100%;box-sizing:border-box;padding:12px 72px 12px 14px;border:1px solid #d0d4d9;border-radius:8px;font-size:16px;line-height:1.2;transition:border-color .15s ease, box-shadow .15s ease;}
+.qi:focus{outline:none;border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,0.15);}
+.i{height:16px;width:16px;}
+.ib{position:absolute;top:50%;transform:translateY(-50%);height:24px;width:24px;border:none;background:transparent;color:#6b7280; /* gray-500 */border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:color .15s ease,background-color .15s ease;}
+.ib:hover{color:#111827;background:rgba(0,0,0,0.04);}
+.ib:focus-visible{outline:2px solid #3b82f6;outline-offset:2px;}
+.ib.q{right:10px;}
+.ib.g{right:40px;}
+.ib.g.active{color:#2563eb;background:rgba(37,99,235,0.12);}
+@media(max-width:420px){.q-ip{padding-right:66px;}.ib.q{right:8px;}.ib.g{right:38px;}}
