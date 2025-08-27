@@ -1,0 +1,44 @@
+/* Keep all your existing styles, and add/replace the following */
+
+/* Remove or comment out these old styles for .toggle-container, .switch, .slider */
+/*
+.toggle-container { ... }
+.switch { ... }
+.slider { ... }
+.slider:before { ... }
+input:checked + .slider { ... }
+input:focus + .slider { ... }
+input:checked + .slider:before { ... }
+.toggle-label { ... }
+*/
+
+/* ADD THIS: New styles for the search option buttons */
+.search-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the buttons */
+    margin-top: 15px;
+}
+
+.option-btn {
+    padding: 8px 16px;
+    border: 1px solid #444;
+    background-color: #2c2c2c;
+    color: #ccc;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.option-btn:hover {
+    background-color: #3a3a3a;
+}
+
+/* This class will be toggled by JavaScript to show the active engine */
+.option-btn.active {
+    background-color: #007bff; /* A bright color to indicate selection */
+    color: #ffffff;
+    border-color: #007bff;
+    font-weight: bold;
+}
