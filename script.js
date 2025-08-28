@@ -1,78 +1,83 @@
+// Wait for the HTML document to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Configuration ---
-    // Storing engine details in an object makes it easy to manage and add more options.
-    const searchEngines = {
-        web: {
-            placeholder: 'Search the web...',
-            url: 'https://duckduckgo.com/?q='
-        },
-        store: {
-            placeholder: 'Search the SSG Store...',
-            url: 'https://swedishstudiosgames.github.io/ssg-store/search/?q='
-        }
-    };
 
-    // --- State ---
-    // This variable keeps track of the currently selected search engine.
-    let activeEngine = 'web'; // 'web' is the default
-
-    // --- DOM Elements ---
+    // Get references to all the HTML elements we need
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
-    const optionButtons = document.querySelectorAll('.option-btn');
+    const optionsBtn = document.getElementById('options-btn');
+    const optionsMenu = document.getElementById('options-menu');
 
-    // --- Functions ---
+    // Set the default search mode
+    let currentMode = 'internet';
+
     /**
-     * Sets the active search engine and updates the UI accordingly.
-     * @param {string} engineName - The key of the engine in the searchEngines object ('web' or 'store').
+     * Toggles the visibility of the search options menu.
      */
-    function setSearchEngine(engineName) {
-        // Exit if the engine doesn't exist or is already active
-        if (!searchEngines[engineName] || engineName === activeEngine) {
-            return;
-        }
-
-        // Update the state
-        activeEngine = engineName;
-
-        // Update the input placeholder
-        searchInput.placeholder = searchEngines[activeEngine].placeholder;
-
-        // Update the active class on buttons
-        optionButtons.forEach(button => {
-            if (button.dataset.engine === activeEngine) {
-                button.classList.add('active');
-            } else {
-                button.classList.remove('active');
-            }
-        });
-    }
-
-    // --- Event Listeners ---
-    
-    // Listen for clicks on the option buttons
-    optionButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Get the engine name from the button's data-engine attribute
-            const engineName = button.dataset.engine;
-            setSearchEngine(engineName);
-        });
+    optionsBtn.addEventListener('click', (event) => {
+        // Stop the click from bubbling up to the document
+        event.stopPropagation(); 
+        optionsMenu.classList.toggle('hidden');
     });
 
-    // Handle the form submission
+    /**
+     * Changes the search mode when a menu item is clicked.
+     */
+    optionsMenu.addEventListener('click', (event) => {
+        const target = event.target;
+        // Ensure the click was on an LI element
+        if (target.tagName === 'LI') {
+            // Update the current mode from the 'data-mode' attribute
+            currentMode = target.dataset.mode;
+            // Update the input's placeholder from the 'data-placeholder' attribute
+            searchInput.placeholder = target.dataset.placeholder;
+            // Hide the menu after selection
+            optionsMenu.classList.add('hidden');
+            // Focus on the input field for a better user experience
+            searchInput.focus();
+        }
+    });
+
+    /**
+     * Handles the form submission based on the current search mode.
+     */
     searchForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent the form from reloading the page
+        // Prevent the form from submitting the default way
+        event.preventDefault(); 
+        
         const query = searchInput.value.trim();
+        if (!query) return; // Do nothing if the search query is empty
 
-        if (query) {
-            // Get the correct search URL from our configuration object
-            const searchUrl = searchEngines[activeEngine].url + encodeURIComponent(query);
-            // Redirect the user to the search results page
-            window.location.href = searchUrl;
+        let searchUrl;
+
+        // Use a switch statement to build the correct URL based on the mode
+        switch (currentMode) {
+            case 'store':
+                // Replace with your actual store's search URL
+                searchUrl = `https://www.your-store.com/search?q=${encodeURIComponent(query)}`;
+                break;
+            case 'image':
+                // This uses Google's reverse image search by URL
+                searchUrl = `https://www.google.com/searchbyimage?image_url=${encodeURIComponent(query)}`;
+                break;
+            case 'internet':
+            default:
+                // This uses a standard Google search
+                searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                break;
         }
+
+        // Open the constructed URL in a new tab
+        window.open(searchUrl, '_blank');
+        
+        // Optional: clear the input after searching
+        // searchInput.value = '';
     });
 
-    // --- Initialization ---
-    // Set the initial state when the page loads
-    setSearchEngine('web'); 
+    /**
+     * Hides the options menu if the user clicks anywhere else on the page.
+     */
+    document.addEventListener('click', () => {
+        optionsMenu.classList.add('hidden');
+    });
+
 });
