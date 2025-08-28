@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSG Search</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Multi-Mode Search Bar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="search-page-container">
-        <header>
-            <img src="logo.png" alt="SSG Logo" class="logo">
-            <h1>SSG Search</h1>
-        </header>
-        <main>
-            <div class="search-container">
-                <form id="search-form" class="search-form">
-                    <input type="text" id="search-input" class="search-input" placeholder="Search the web...">
-                    <button type="submit" class="search-button">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-                
-                <div class="search-options">
-                    <button class="option-btn active" data-engine="web">Web</button>
-                    <button class="option-btn" data-engine="store">Store</button>
-                </div>
+
+    <div class="search-container">
+        <form id="search-form" role="search">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search the internet..." 
+                aria-label="Search"
+            >
+            <div class="search-options-wrapper">
+                <button type="button" id="options-btn" aria-label="Select search mode">...</button>
+                <ul id="options-menu" class="hidden">
+                    <li data-mode="internet" data-placeholder="Search the internet...">🌐 Internet Search</li>
+                    <li data-mode="store" data-placeholder="Search our store...">🛍️ Store Search</li>
+                    <li data-mode="image" data-placeholder="Paste image URL...">🖼️ Reverse Image Search</li>
+                </ul>
             </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 Swedish Studios Games. All rights reserved.</p>
-        </footer>
+        </form>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
