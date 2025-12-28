@@ -1,0 +1,268 @@
+@charset "utf-8";
+@viewport{width:device-width;initial-scale:1.0;}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* --- Basic Resets & Body --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(#fff, #111);
+    margin: 0px;
+}
+
+header {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: #eee;
+}
+
+/* --- Sections --- */
+#s1 {
+    box-shadow: 1px 1.5px #333;
+    margin: auto;
+    border: 1px solid #101010;
+    border-radius: 0px 0px 28px 28px;
+    width: 64%;
+    background: #222;
+}
+
+#s2 {
+    background: #444;
+    box-shadow: 1px 1.5px #333;
+    margin: auto;
+    width: 64%;
+    border: 1px solid #101010;
+    text-align: center;
+}
+
+#s2 h1 {
+    text-align: center;
+}
+
+#s3 {
+    background: #111;
+    box-shadow: 1px 1.5px #333;
+    margin: auto;
+    width: auto;
+    border: 1px solid #101010;
+    text-align: center;
+}
+
+/* --- Banner Image --- */
+div.c {
+    padding: 15px 0px;
+    border: 1px solid #dedede;
+    margin: auto;
+    background: url('https://swedishstudiosgames.github.io/ssg-website/root/lib/assets/gfx/img/bnr/bgimg/white_brick_wall_4k.png') no-repeat center center;
+    /* Centering the banner logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bb {
+    height: 78px;
+    width: 420px;
+    display: block;
+}
+
+/* --- Navigation --- */
+#nbr {
+    border-radius: 0px 0px 28px 28px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    background: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nbr a {
+    float: left;
+    font-size: 12px;
+    color: #dedede;
+    text-align: center;
+    padding: 12px 9px;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Vertically center icon with text */
+}
+
+#nbr a:hover {
+    background: #1e1e1e;
+    color: #aaa;
+}
+
+.nbr { float: right; }
+.nbl { float: left; }
+header div nav li { display: inline-block; list-style-type: none; }
+
+/* Checkout/Account Icon Spacing */
+.nav-icon-right {
+    margin-left: 16px; /* Moves the icon a few pixels to the right */
+}
+
+/* --- Search Bar (Dark Mode) --- */
+.qf {
+    margin: auto 18%;
+    position: relative;
+    /* Responsive margins */
+}
+
+.qw {
+    position: relative;
+    width: 100%;
+}
+
+.qi {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 100px 12px 14px; /* Right padding for buttons */
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.2;
+    transition: border-color .15s ease, box-shadow .15s ease;
+    background-color: #222;
+    color: #eee;
+}
+
+.qi::placeholder { color: #888; }
+
+.qi:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* File Input Specifics */
+input[type="file"].qi {
+    padding: 9px 14px;
+    cursor: pointer;
+}
+
+/* --- Buttons & Icons --- */
+.ib {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 32px;
+    width: 32px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .15s ease;
+}
+
+.ib:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ib img.i {
+    height: 18px;
+    width: 18px;
+    display: block;
+}
+
+.ib.m { right: 8px; }   /* Menu button position */
+.ib.q { right: 44px; }  /* Search button position */
+
+/* --- Dropdown Menu --- */
+#mdd {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #2a2a2a;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    border-radius: 8px;
+    margin-top: 8px;
+    border: 1px solid #444;
+    overflow: hidden;
+    display: none; /* Hidden by default */
+}
+
+#mdd.show {
+    display: block;
+}
+
+#mdd button {
+    color: #dedede;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+#mdd button:hover {
+    background-color: #3b3b3b;
+    color: #fff;
+}
+
+#mdd button img.i {
+    height: 18px;
+    width: 18px;
+}
+
+/* Active Menu Item State */
+#mdd button.active {
+    background-color: #333;
+    color: #3b82f6; /* Blueish highlight */
+    font-weight: bold;
+}
+
+/* --- Utilities --- */
+.hidden {
+    display: none !important;
+}
+
+/* --- Footer & Layout --- */
+section { float: left; }
+article { float: right; }
+section article {
+    text-align: center;
+    width: 50%;
+    height: auto;
+    background: #444;
+    margin: 48px auto;
+    display: grid;
+}
+
+.ft {
+    margin-right: 16px;
+    float: left;
+    text-align: center;
+}
+.ft a:hover { color: #333; }
+footer nav ul { display: inline-block; list-style-type: none; }
+
+/* --- Mobile Responsiveness --- */
+@media(max-width: 420px) {
+    .qf {
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 90%;
+    }
+    .qi {
+        padding-right: 86px;
+    }
+    .ib.q { right: 48px; }
+}
