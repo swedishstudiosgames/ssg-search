@@ -22,9 +22,7 @@ a {
 
 /* --- Search Bar --- */
 div.c {
-    margin: 50% auto;
-    justify-content: center;
-    align-items: center;
+    margin: 20% auto;
 }
 
 /* --- Search Bar (Dark Mode) --- */
@@ -156,17 +154,6 @@ input[type="file"].qi {
 }
 
 /* --- Footer & Layout --- */
-section { float: left; }
-article { float: right; }
-section article {
-    text-align: center;
-    width: 50%;
-    height: auto;
-    background: #444;
-    margin: 48px auto;
-    display: grid;
-}
-
 .ft {
     margin-right: 16px;
     float: left;
