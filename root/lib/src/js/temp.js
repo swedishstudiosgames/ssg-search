@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const form = document.createElement('form');
         form.method = 'POST';
         // UPDATED: Points to Google Lens upload endpoint (Chrome Context Menu flavor)
-        form.action = 'https://lens.google.com/upload?ep=ccm'; 
+        form.action = 'https://lens.google.com/upload'; 
         form.enctype = 'multipart/form-data';
         form.target = '_blank';
         form.style.display = 'none';
