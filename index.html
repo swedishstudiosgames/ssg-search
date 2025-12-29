@@ -1,60 +1,69 @@
 <!doctype html>
-<html lang="en-us"type="text/html">
-  <head>
+<html lang="en-us">
+<head>
     <meta charset="utf-8">
-    <meta name="viewport"content="width=device-width,initial-scale=1.0">
-    <meta name="description"content="We're a video-game publisher.">
-    <meta name="keywords"content="swedishstudios,swedishstudio,games,game,gaming,computer,computers,company,companies,swedish,sweden,studios,studio,ssg,download,dlc,forum,guide,tutorial,support,help,minecraft,texture,windows,linux,ubuntu,lubuntu,arch,emulator,virtual,folders,vm,ps4,playstation,driver,firmware,os,server,ss34,team,the,hawks,hawkeye,hawkeyes,hawk,eyes,eye,fortnite,swedenstyle34,restlesshunter69,restlesshunter,restless,discord,router,port,forward,forwarding,portfolio,portforwarding,portable,mobile,portforward,fedora,free,vmware,virualbox,mod,mods">
-    <link rel="icon"type="image/png"href="https://swedishstudiosgames.github.io/ssg-website/root/lib/assets/gfx/img/ico/favico/emblem/favico.png">
-    <link rel="stylesheet"type="text/css"href="/root/lib/src/css/style-v2.css">
-    <title>SwedishStudios&nbsp;Games&nbsp;-&nbsp;Home</title>
-   </head>
-  <body>
-	<!-- SEARCH FORM START -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search Engine">
+    <title>Search Engine</title>
+    <link rel="icon" type="image/png" href="/root/lib/assets/gfx/img/ico/favico/emblem/favico.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/root/lib/src/css/style-v2.css">
+</head>
+<body>
+    
     <div class="c">
-      <form id="sq" action="https://search.swedishstudiosgames.com/search" method="POST" class="qf" role="search" aria-label="Site search">
-		<h1>Search&nbsp;Bar</h1>
-        <div class="qw">
-        
-        <!-- Text Input -->
-        <input id="q" class="qi" type="search" name="q" placeholder="Search the internet..." autocomplete="off" spellcheck="true" aria-label="Search query" required>
-        
-        <!-- File Input (Hidden by default) -->
-        <input id="qim" class="qi hidden" type="file" name="encoded_image" accept="image/*">
+        <form id="sq" class="qf" action="https://search.swedishstudiosgames.com/search" method="POST" role="search" aria-label="Site search">
+            <h1>Search Bar</h1>
+            
+            <div class="qw">
+                <input id="q" class="qi" type="search" name="q" 
+                       placeholder="Search the internet..." 
+                       autocomplete="off" spellcheck="true" 
+                       aria-label="Search query" required>
+                
+                <input id="qim" class="qi hidden" type="file" name="encoded_image" accept="image/png, image/jpeg, image/gif, image/webp">
 
-        <!-- Search Button -->
-        <button type="submit" class="ib q" aria-label="Submit search" title="Search">
-          <img class="i" src="/root/lib/assets/gfx/img/ico/btn/sok.svg" alt="Search">
-        </button>
+                <button type="button" id="clr" class="ib x hidden" aria-label="Clear search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
 
-        <!-- Menu Button -->
-        <button type="button" id="mb" class="ib m" aria-label="Search options" aria-haspopup="true" aria-expanded="false">
-          <img class="i" src="/root/lib/assets/gfx/img/ico/btn/mom.svg" alt="Options">
-        </button>
+                <button type="submit" class="ib q" aria-label="Submit search" title="Search">
+                    <img class="i" src="/root/lib/assets/gfx/img/ico/btn/sok.svg" alt="Search">
+                </button>
 
-        <!-- Dropdown Menu -->
-        <div id="mdd">
-            <button type="button" data-mode="web" class="active">
-                <img class="i" src="/root/lib/assets/gfx/img/ico/btn/www.svg" alt="Web">
-                Internet Search
-            </button>
-            <button type="button" data-mode="image">
-                <img class="i" src="/root/lib/assets/gfx/img/ico/btn/img.svg" alt="Image">
-                Image Search
-            </button>
-            <button type="button" data-mode="store">
-                <img class="i" src="/root/lib/assets/gfx/img/ico/btn/btk.svg" alt="Store">
-                Store Search
-            </button>
-            <button type="button" data-mode="speech">
-                <img class="i" src="/root/lib/assets/gfx/img/ico/btn/mic.svg" alt="Speech">
-                Speech to Text
-            </button>
-        </div>
-      </div>
-	 <script src="https://lopan.se/root/lib/src/js/temp.js" defer crossorigin="anonymous"></script>
-    </form>
+                <button type="button" id="mb" class="ib m" aria-label="Search options" aria-haspopup="true" aria-expanded="false">
+                    <img class="i" src="/root/lib/assets/gfx/img/ico/btn/mom.svg" alt="Options">
+                </button>
+
+                <div id="mdd">
+                    <button type="button" data-mode="web" class="active">
+                        <img class="i" src="/root/lib/assets/gfx/img/ico/btn/www.svg" alt="Web">
+                        Internet Search
+                    </button>
+                    <button type="button" data-mode="image">
+                        <img class="i" src="/root/lib/assets/gfx/img/ico/btn/img.svg" alt="Image">
+                        Image Search
+                    </button>
+                    <button type="button" data-mode="store">
+                        <img class="i" src="/root/lib/assets/gfx/img/ico/btn/btk.svg" alt="Store">
+                        Store Search
+                    </button>
+                    <button type="button" data-mode="speech">
+                        <img class="i" src="/root/lib/assets/gfx/img/ico/btn/mic.svg" alt="Speech">
+                        Speech to Text
+                    </button>
+                </div>
+            </div>
+
+            <script src="/root/lib/src/js/main.js" defer crossorigin="anonymous"></script>
+        </form>
     </div>
-    <!-- SEARCH FORM END -->
-   </body>
- </html>
+    <footer>
+        <p>Powered By Searxng</p>
+    </footer>
+
+</body>
+</html>
