@@ -1,11 +1,19 @@
 /**
  * SSG Website - Search Functionality (temp.js)
- * Approach: Direct Form Submission to Google Lens (Option A)
- * Security: Uses 'no-referrer' to attempt to bypass 403 Forbidden checks.
- * Privacy: Highest (No third-party storage).
+ * Method: Imgur Upload -> Google Lens -> Immediate Deletion
+ * Privacy: High (Image exists on Imgur for only ~2 seconds)
+ * Note: Requires valid Imgur Client ID
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // =========================================================
+    // CONFIGURATION
+    // Get a free Client ID from https://api.imgur.com/oauth2/addclient
+    // Select "Anonymous usage without user authorization"
+    // =========================================================
+    const IMGUR_CLIENT_ID = 'YOUR_IMGUR_CLIENT_ID_HERE'; 
+    // =========================================================
+
     const ui = {
         form: document.getElementById('sq'),
         textInput: document.getElementById('q'),
@@ -100,16 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================
-    // SUBMISSION & VALIDATION
+    // SUBMISSION HANDLER
     // =========================================
     ui.form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // 1. Image Search (Direct Upload)
+        // 1. Image Search (Secure Imgur -> Google Lens)
         if (currentMode === 'image') {
             const file = ui.fileInput.files[0];
             if (!file) return;
 
+            // Basic validation
             const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
             if (!validTypes.includes(file.type)) {
                 alert("Please upload a valid image file (JPG, PNG, GIF, WEBP).");
@@ -117,7 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            handleGoogleLensDirectUpload(ui.fileInput);
+            if (IMGUR_CLIENT_ID === 'YOUR_IMGUR_CLIENT_ID_HERE') {
+                alert("Configuration Error: Missing Imgur Client ID in temp.js");
+                return;
+            }
+
+            handleSecureImgurSearch(file);
         }
         // 2. Text Search
         else {
@@ -132,51 +146,86 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /**
-     * Handles the secure form-based upload to Google Lens.
-     * Uses 'no-referrer' to prevent Google from blocking the request.
-     */
-    function handleGoogleLensDirectUpload(fileInput) {
-        const form = document.createElement('form');
-        form.method = 'POST';
-        // 'ep=ccm' stands for Chrome Context Menu, often whitelisted for uploads
-        form.action = 'https://lens.google.com/upload?ep=ccm'; 
-        form.enctype = 'multipart/form-data';
-        form.target = '_blank'; // Opens in new tab
-        form.style.display = 'none';
+    // =========================================
+    // SECURE UPLOAD & DELETE LOGIC
+    // =========================================
+    function handleSecureImgurSearch(file) {
+        // Step A: Open the tab IMMEDIATELY (Synchronously) to bypass Popup Blockers
+        const newTab = window.open('', '_blank');
         
-        // CRITICAL SECURITY FIX:
-        // Tells the browser NOT to send the "Referer: swedishstudiosgames.com" header.
-        // This makes Google think the request is a direct user action.
-        form.referrerPolicy = 'no-referrer'; 
+        // Step B: Set initial content in the new tab so the user knows what's happening
+        if (newTab) {
+            newTab.document.write(`
+                <html>
+                    <head><title>Processing Image...</title></head>
+                    <body style="font-family:sans-serif; text-align:center; padding-top:50px;">
+                        <h2>Uploading your image securely...</h2>
+                        <p>Please wait. This may take a few seconds.</p>
+                        <div id="status" style="color:#666;">Contacting Imgur...</div>
+                    </body>
+                </html>
+            `);
+        } else {
+            alert("Please allow popups for this site to use Image Search.");
+            return;
+        }
 
-        const originalName = fileInput.name;
-        // Google Lens requires the file input to be named 'encoded_image'
-        fileInput.name = 'encoded_image'; 
-        
-        const parent = fileInput.parentNode;
-        const sibling = fileInput.nextSibling;
+        const formData = new FormData();
+        formData.append('image', file);
 
-        // Move the file input into the form temporarily
-        form.appendChild(fileInput);
-        document.body.appendChild(form);
-        
-        form.submit();
+        // Step C: Upload to Imgur
+        fetch('https://api.imgur.com/3/image', {
+            method: 'POST',
+            headers: { 'Authorization': `Client-ID ${IMGUR_CLIENT_ID}` },
+            body: formData
+        })
+        .then(res => res.json())
+        .then(json => {
+            if (!json.success) throw new Error(json.data.error || "Upload failed");
 
-        // Restore the file input to its original place
-        setTimeout(() => {
-            if (sibling) {
-                parent.insertBefore(fileInput, sibling);
+            const imgUrl = json.data.link;
+            const deleteHash = json.data.deletehash; // <--- The deletion key
+
+            // Step D: Redirect the new tab to Google Lens
+            if (newTab) {
+                newTab.document.getElementById('status').innerText = "Redirecting to Google Lens...";
+                newTab.location.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(imgUrl)}`;
+            }
+
+            // Step E: IMMEDIATELY Delete the image from Imgur
+            // We verify the delete happened for our own logging
+            console.log("Image uploaded. Initiating privacy cleanup...");
+            
+            return fetch(`https://api.imgur.com/3/image/${deleteHash}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Client-ID ${IMGUR_CLIENT_ID}` }
+            });
+        })
+        .then(res => res.json())
+        .then(json => {
+            if (json.success) {
+                console.log("PRIVACY SUCCESS: Image permanently deleted from server.");
             } else {
-                parent.appendChild(fileInput);
+                console.warn("PRIVACY WARNING: Auto-delete failed. Manual cleanup may be required.");
             }
             
-            fileInput.name = originalName;
-            fileInput.value = ''; // Reset the input so the user can upload again if needed
-            document.body.removeChild(form);
-        }, 500);
+            // Clear input on success
+            ui.fileInput.value = '';
+        })
+        .catch(err => {
+            console.error('Error:', err);
+            if (newTab) {
+                newTab.document.body.innerHTML = `
+                    <h2 style="color:red">Error</h2>
+                    <p>Failed to process image. ${err.message}</p>
+                    <p>Please close this tab and try again.</p>
+                `;
+            } else {
+                alert("Failed to upload image.");
+            }
+        });
     }
-    
+
     // =========================================
     // SPEECH RECOGNITION
     // =========================================
@@ -189,21 +238,13 @@ document.addEventListener('DOMContentLoaded', () => {
         recognition.maxAlternatives = 1;
 
         ui.textInput.placeholder = "Listening...";
-        
         recognition.start();
 
         recognition.onresult = (event) => {
-            const speechResult = event.results[0][0].transcript;
-            ui.textInput.value = speechResult;
+            ui.textInput.value = event.results[0][0].transcript;
             toggleClearBtn(); 
         };
-
-        recognition.onspeechend = () => {
-            recognition.stop();
-        };
-
-        recognition.onerror = () => {
-            ui.textInput.placeholder = "Error hearing voice.";
-        }
+        recognition.onspeechend = () => recognition.stop();
+        recognition.onerror = () => { ui.textInput.placeholder = "Error hearing voice."; }
     }
 });
