@@ -154,10 +154,12 @@ div.c {
 /* --- 8. Footer --- */
 footer {
     width: 100%;
-    padding: 20px;
-    text-align: center;
     font-size: 14px;
     color: var(--text-muted);
     background-color: var(--bg-color);
     margin-top: auto; /* Pushes footer to bottom */
+}
+
+footer i a {
+    color:blue;
 }
