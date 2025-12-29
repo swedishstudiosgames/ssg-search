@@ -1,108 +1,102 @@
 /**
- * SSG Website - Search Functionality (sok.js)
- * Modernized, Clean, and Interoperable with index.html
+ * SSG Website - Search Functionality (temp.js)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Configuration: specific to your index.html IDs
     const ui = {
         form: document.getElementById('sq'),
         textInput: document.getElementById('q'),
         fileInput: document.getElementById('qim'),
+        clearBtn: document.getElementById('clr'), // Target the new Clear Button
         menuBtn: document.getElementById('mb'),
         menuDropdown: document.getElementById('mdd'),
         modeBtns: document.querySelectorAll('#mdd button')
     };
 
-    // Verify critical elements exist before running
-    if (!ui.form || !ui.menuBtn || !ui.menuDropdown) {
-        console.warn('Search UI elements missing. Check IDs in index.html.');
-        return;
+    if (!ui.form) return;
+
+    let currentMode = 'web';
+
+    // =========================================
+    // CLEAR BUTTON LOGIC
+    // =========================================
+    
+    // Toggle "X" button visibility based on input
+    function toggleClearBtn() {
+        if (ui.textInput.value.length > 0) {
+            ui.clearBtn.classList.remove('hidden');
+        } else {
+            ui.clearBtn.classList.add('hidden');
+        }
     }
 
-    // State management
-    let currentMode = 'web'; // Default mode
+    // Listen for typing
+    ui.textInput.addEventListener('input', toggleClearBtn);
+    
+    // Handle Click: Clear text and focus input
+    ui.clearBtn.addEventListener('click', () => {
+        ui.textInput.value = '';
+        toggleClearBtn();
+        ui.textInput.focus();
+    });
 
     // =========================================
-    // MENU INTERACTIVITY
+    // MENU & MODE LOGIC
     // =========================================
 
-    // Toggle Dropdown Visibility
     ui.menuBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent immediate closing
+        e.stopPropagation();
         const isVisible = ui.menuDropdown.style.display === 'block';
         ui.menuDropdown.style.display = isVisible ? 'none' : 'block';
         ui.menuBtn.setAttribute('aria-expanded', !isVisible);
     });
 
-    // Close Dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!ui.menuBtn.contains(e.target) && !ui.menuDropdown.contains(e.target)) {
             ui.menuDropdown.style.display = 'none';
-            ui.menuBtn.setAttribute('aria-expanded', 'false');
         }
     });
 
-    // Handle Menu Option Selection
     ui.modeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active visual state
             ui.modeBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            // Apply Mode Logic
-            const mode = btn.dataset.mode;
-            setSearchMode(mode);
-
-            // Close menu after selection
+            setSearchMode(btn.dataset.mode);
             ui.menuDropdown.style.display = 'none';
         });
     });
 
-    // =========================================
-    // MODE SWITCHING LOGIC
-    // =========================================
-
     function setSearchMode(mode) {
         currentMode = mode;
-        
-        // Reset Inputs
         ui.textInput.value = '';
         ui.fileInput.value = '';
+        toggleClearBtn(); // Hide X button on reset
+
+        // Reset UI states
+        ui.textInput.classList.remove('hidden');
+        ui.fileInput.classList.add('hidden');
+        ui.clearBtn.classList.add('hidden'); // Default hide
 
         switch (mode) {
             case 'image':
-                // Hide text, Show file input
                 ui.textInput.classList.add('hidden');
                 ui.fileInput.classList.remove('hidden');
-                ui.textInput.removeAttribute('required'); // Prevent HTML5 validation blocking
+                ui.textInput.removeAttribute('required');
                 break;
-
             case 'store':
-                // Show text, Hide file, Update placeholder
-                ui.textInput.classList.remove('hidden');
-                ui.fileInput.classList.add('hidden');
                 ui.textInput.placeholder = "Search the store...";
                 ui.textInput.setAttribute('required', '');
                 break;
-
             case 'speech':
-                // Basic Web Speech API Implementation (Modern Feature)
                 if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
                     startDictation();
                 } else {
-                    alert("Speech recognition is not supported in this browser.");
+                    alert("Speech not supported.");
                 }
-                // Fallback to text view
-                ui.textInput.classList.remove('hidden');
-                ui.fileInput.classList.add('hidden');
+                // Keep text input visible for fallback/result
+                ui.textInput.classList.remove('hidden'); 
                 break;
-
-            case 'web':
-            default:
-                // Default Text Search
-                ui.textInput.classList.remove('hidden');
-                ui.fileInput.classList.add('hidden');
+            default: // web
                 ui.textInput.placeholder = "Search the internet...";
                 ui.textInput.setAttribute('required', '');
                 break;
@@ -110,39 +104,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================
-    // SEARCH EXECUTION & GOOGLE LOGIC
+    // SUBMISSION & VALIDATION
     // =========================================
 
     ui.form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Intercept standard submit
+        e.preventDefault();
 
-        // 1. Image Search Handling
-        if (currentMode === 'image' && ui.fileInput.files.length > 0) {
+        // 1. Image Search + Strict Validation
+        if (currentMode === 'image') {
+            const file = ui.fileInput.files[0];
+            
+            // Check if file exists
+            if (!file) return;
+
+            // Strict Mime Type Check
+            const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+            if (!validTypes.includes(file.type)) {
+                alert("Please upload a valid image file (JPG, PNG, GIF, WEBP).");
+                ui.fileInput.value = ''; // Clear invalid file
+                return;
+            }
+
             handleGoogleReverseImageSearch(ui.fileInput);
         }
-        // 2. Standard Text Search Handling
+        // 2. Text Search
         else {
             const query = ui.textInput.value.trim();
             if (!query) return;
 
-            if (currentMode === 'store') {
-                 // Redirect to store search (Example URL)
-                 window.location.href = `https://store.swedishstudiosgames.com/search?q=${encodeURIComponent(query)}`;
-            } else {
-                 // Default BEX Web Search
-                 window.location.href = `https://search.swedishstudiosgames.com/search?q=${encodeURIComponent(query)}`;
-            }
+            const baseUrl = currentMode === 'store' 
+                ? 'https://store.swedishstudiosgames.com/search' 
+                : 'https://search.swedishstudiosgames.com/search';
+            
+            window.location.href = `${baseUrl}?q=${encodeURIComponent(query)}`;
         }
     });
 
-    /**
-     * Helper: Handle Google Reverse Image Search via hidden form submission
-     */
-    function handleGoogleReverseImageSearch(fileInputElement) {
-        const originalParent = fileInputElement.parentNode;
-        const nextSibling = fileInputElement.nextSibling;
-
-        // Create dynamic form for Google
+    function handleGoogleReverseImageSearch(fileInput) {
         const form = document.createElement('form');
         form.method = 'POST';
         form.action = 'https://www.google.com/searchbyimage/upload';
@@ -150,32 +148,26 @@ document.addEventListener('DOMContentLoaded', () => {
         form.target = '_blank';
         form.style.display = 'none';
 
-        // Google requires input name 'encoded_image'
-        // (Your HTML already names it 'encoded_image', but we ensure it here just in case)
-        const originalName = fileInputElement.name;
-        fileInputElement.name = 'encoded_image';
+        const originalName = fileInput.name;
+        fileInput.name = 'encoded_image';
+        const parent = fileInput.parentNode;
+        const sibling = fileInput.nextSibling;
 
-        // Move input to temp form
-        form.appendChild(fileInputElement);
+        form.appendChild(fileInput);
         document.body.appendChild(form);
-
         form.submit();
 
-        // Restore input to original location
         setTimeout(() => {
-            if (nextSibling) {
-                originalParent.insertBefore(fileInputElement, nextSibling);
-            } else {
-                originalParent.appendChild(fileInputElement);
-            }
-            fileInputElement.name = originalName;
-            fileInputElement.value = ''; // Clear selection
+            if (sibling) parent.insertBefore(fileInput, sibling);
+            else parent.appendChild(fileInput);
+            fileInput.name = originalName;
+            fileInput.value = ''; 
             document.body.removeChild(form);
         }, 100);
     }
-
+    
     // =========================================
-    // EXTRA: SPEECH RECOGNITION (Modern)
+    // SPEECH RECOGNITION
     // =========================================
     function startDictation() {
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -192,13 +184,13 @@ document.addEventListener('DOMContentLoaded', () => {
         recognition.onresult = (event) => {
             const speechResult = event.results[0][0].transcript;
             ui.textInput.value = speechResult;
-            // Optional: Automatically submit after speaking
-            // ui.form.dispatchEvent(new Event('submit')); 
+            toggleClearBtn(); // Show 'X' button since we now have text
+            // ui.form.dispatchEvent(new Event('submit')); // Optional auto-submit
         };
 
         recognition.onspeechend = () => {
             recognition.stop();
-            ui.textInput.placeholder = "Search the internet...";
+            // Placeholder resets when mode changes or manually
         };
 
         recognition.onerror = () => {
