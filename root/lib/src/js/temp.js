@@ -1,4 +1,4 @@
-/**
+ng/**
  * SSG Website - Search Functionality (temp.js)
  * Method: Imgur Upload -> Google Lens -> Immediate Deletion
  * Privacy: High (Image exists on Imgur for only ~2 seconds)
