@@ -1,17 +1,15 @@
 /**
- * SSG Website - Search Functionality (temp.js)
- * Method: Imgur Upload -> Google Lens -> Immediate Deletion
- * Privacy: High (Image exists on Imgur for only ~2 seconds)
- * Note: Requires valid Imgur Client ID
+ * SSG Website - Search Functionality
+ * Method: Secure Proxy Upload (Frontend)
+ * Privacy: Best (API Key is hidden on server; Image deletes after 5 mins)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     // =========================================================
     // CONFIGURATION
-    // Get a free Client ID from https://api.imgur.com/oauth2/addclient
-    // Select "Anonymous usage without user authorization"
+    // Points to the file 'functions/upload.js' automatically
     // =========================================================
-    const IMGUR_CLIENT_ID = 'YOUR_IMGUR_CLIENT_ID_HERE'; 
+    const WORKER_URL = '/upload'; 
     // =========================================================
 
     const ui = {
@@ -113,25 +111,19 @@ document.addEventListener('DOMContentLoaded', () => {
     ui.form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // 1. Image Search (Secure Imgur -> Google Lens)
+        // 1. Image Search (Send to Proxy)
         if (currentMode === 'image') {
             const file = ui.fileInput.files[0];
             if (!file) return;
 
-            // Basic validation
-            const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+            const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/bmp'];
             if (!validTypes.includes(file.type)) {
-                alert("Please upload a valid image file (JPG, PNG, GIF, WEBP).");
+                alert("Please upload a valid image file.");
                 ui.fileInput.value = ''; 
                 return;
             }
 
-            if (IMGUR_CLIENT_ID === 'YOUR_IMGUR_CLIENT_ID_HERE') {
-                alert("Configuration Error: Missing Imgur Client ID in temp.js");
-                return;
-            }
-
-            handleSecureImgurSearch(file);
+            handleSecureProxySearch(file);
         }
         // 2. Text Search
         else {
@@ -147,21 +139,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =========================================
-    // SECURE UPLOAD & DELETE LOGIC
+    // SECURE PROXY UPLOAD LOGIC
     // =========================================
-    function handleSecureImgurSearch(file) {
-        // Step A: Open the tab IMMEDIATELY (Synchronously) to bypass Popup Blockers
+    function handleSecureProxySearch(file) {
+        // Step A: Open tab immediately to bypass Popup Blockers
         const newTab = window.open('', '_blank');
         
-        // Step B: Set initial content in the new tab so the user knows what's happening
         if (newTab) {
             newTab.document.write(`
                 <html>
-                    <head><title>Processing Image...</title></head>
+                    <head><title>Secure Search...</title></head>
                     <body style="font-family:sans-serif; text-align:center; padding-top:50px;">
-                        <h2>Uploading your image securely...</h2>
-                        <p>Please wait. This may take a few seconds.</p>
-                        <div id="status" style="color:#666;">Contacting Imgur...</div>
+                        <h2>Uploading encrypted image...</h2>
+                        <p>Your image will automatically expire in 5 minutes.</p>
+                        <div id="status" style="color:#666;">Contacting Secure Proxy...</div>
                     </body>
                 </html>
             `);
@@ -173,51 +164,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData();
         formData.append('image', file);
 
-        // Step C: Upload to Imgur
-        fetch('https://api.imgur.com/3/image', {
+        // Step B: Send to YOUR Cloudflare Pages Function
+        fetch(WORKER_URL, {
             method: 'POST',
-            headers: { 'Authorization': `Client-ID ${IMGUR_CLIENT_ID}` },
             body: formData
         })
         .then(res => res.json())
         .then(json => {
-            if (!json.success) throw new Error(json.data.error || "Upload failed");
+            if (!json.success) throw new Error(json.error?.message || "Upload failed");
 
-            const imgUrl = json.data.link;
-            const deleteHash = json.data.deletehash; // <--- The deletion key
+            const imgUrl = json.data.url;
 
-            // Step D: Redirect the new tab to Google Lens
+            // Step C: Redirect the new tab
             if (newTab) {
-                newTab.document.getElementById('status').innerText = "Redirecting to Google Lens...";
-                newTab.location.href = `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(imgUrl)}`;
-            }
-
-            // Step E: IMMEDIATELY Delete the image from Imgur
-            // We verify the delete happened for our own logging
-            console.log("Image uploaded. Initiating privacy cleanup...");
-            
-            return fetch(`https://api.imgur.com/3/image/${deleteHash}`, {
-                method: 'DELETE',
-                headers: { 'Authorization': `Client-ID ${IMGUR_CLIENT_ID}` }
-            });
-        })
-        .then(res => res.json())
-        .then(json => {
-            if (json.success) {
-                console.log("PRIVACY SUCCESS: Image permanently deleted from server.");
-            } else {
-                console.warn("PRIVACY WARNING: Auto-delete failed. Manual cleanup may be required.");
+                newTab.document.getElementById('status').innerText = "Opening image...";
+                newTab.location.href = imgUrl;
             }
             
-            // Clear input on success
-            ui.fileInput.value = '';
+            ui.fileInput.value = ''; 
+            console.log(`Secure upload successful. Server auto-delete active.`);
         })
         .catch(err => {
             console.error('Error:', err);
             if (newTab) {
                 newTab.document.body.innerHTML = `
                     <h2 style="color:red">Error</h2>
-                    <p>Failed to process image. ${err.message}</p>
+                    <p>Failed to connect to secure proxy.</p>
+                    <p>${err.message}</p>
                     <p>Please close this tab and try again.</p>
                 `;
             } else {
