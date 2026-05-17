@@ -1,1 +1,76 @@
+{
+  "processor": {
+    "product_name": "AMD Ryzen 9 9950X3D2 Dual Edition",
+    "architecture": "Zen 5 (Granite Ridge)",
+    "socket": "AM5",
+    "cores": 16,
+    "threads": 32,
+    "base_clock_ghz": 4.3,
+    "boost_clock_ghz": 5.6,
+    "tdp_w": 200,
+    "max_temp_c": 95,
+    "package_die_count": 3,
+    "lithography_cpu": "TSMC 4 nm FinFET",
+    "lithography_io": "TSMC 6 nm FinFET",
+    "multithreading_smt": "Supported",
+    "unlocked_for_overclocking": "Yes (Precision Boost Overdrive)",
+    "curve_optimizer": "Supported",
+    "ryzen_master_support": "Supported"
+  },
+  "cache": {
+    "l1": "1280 KB",
+    "l2": "16 MB",
+    "l3": "192 MB (Dual 3D V-Cache)",
+    "total": "208 MB"
+  },
+  "memory": {
+    "ram_generation": "DDR5 (ECC Supported)",
+    "max_memory": "256 GB (Dual Channel)",
+    "memory_subtype": "UDIMM",
+    "amd_expo": "Supported"
+  },
+  "storage_and_connectivity": {
+    "pcie_version": "PCIe 5.0",
+    "pcie_lanes_total_usable": "28 / 24",
+    "nvme_support": "Boot, RAID0, RAID1, RAID10",
+    "usb_3_2_gen2": "4 Ports (10Gbps)",
+    "usb_2_0": "1 Port (480Mbps)",
+    "type_c_dp_alt_mode": "Supported"
+  },
+  "integrated_graphics": {
+    "model": "AMD Radeon™ Graphics",
+    "cores": 2,
+    "frequency_mhz": 2200
+  },
+  "compatibility": {
+    "chipsets": [
+      "X870E", "X870", "X670E", "X670", "B650E", "B650", "A620"
+    ],
+    "os_support": [
+      "Windows 10/11 x64", "RHEL", "Ubuntu"
+    ]
+  },
+  "extensions": [
+    "AES", "AMD-V", "AVX", "AVX-512", "AVX2", "FMA3", "MMX(+)", "SHA", "SSE", "SSE2", "SSE3", "SSE4.1", "SSE4.2", "SSE4A", "SSSE3", "x86-64"
+  ],
+  "security_features": [
+    "AMD Secure Processor",
+    "AMD Platform Secure Boot",
+    "Windows Secure Boot",
+    "UEFI Secure Boot",
+    "Windows Device Guard",
+    "Supervisor Mode Execution Prevention (SMEP)",
+    "Guest Mode Execution (GMET) Trap",
+    "Virtualization-Based Security (VBS)",
+    "Windows Secured-Core PC",
+    "Firmware TPM",
+    "AMD-V (SVM)",
+    "AMD AVIC (Interrupt Virtualization)",
+    "AMD-Vi (I/O MMU Virtualization)",
+    "Second Level Address Translation (SLAT)",
+    "Advanced Encryption Standard New Instructions (AES-NI)",
+    "AMD Enhanced Virus Protection (NX bit)",
+    "AMD Shadow Stack"
+  ]
+}
 
