@@ -1,0 +1,121 @@
+{
+  "products": [
+    {
+      "product_id": "amd_ryzen_9_9950x3d2_dual_edition",
+      "name": "AMD Ryzen 9 9950X3D2 Dual Edition",
+      "countries": [
+        {
+          "country_code": "se",
+          "currency_code": "SEK",
+          "price_history": [
+            {
+              "retailer": "Amazon Sweden",
+              "url": "https://www.amazon.se/-/en/AMD-100-100001978WOF/dp/B0GTRTJSNZ/",
+              "history": [
+                { "date": "2026-04-28", "price": 10420 },
+                { "date": "2026-04-29", "price": 10390 },
+                { "date": "2026-05-01", "price": 10388 },
+                { "date": "2026-05-03", "price": 10390 },
+                { "date": "2026-05-04", "price": 10390 },
+                { "date": "2026-05-07", "price": 10390 },
+                { "date": "2026-05-13", "price": 9986 },
+                { "date": "2026-05-15", "price": 9986 },
+                { "date": "2026-05-16", "price": 9986 }
+              ]
+            },
+            {
+              "retailer": "Elgiganten",
+              "url": "https://www.elgiganten.se/product/gaming/datorkomponenter/processor-cpu/amd-ryzen-9-9950x3d2-processor/1083223",
+              "history": [
+                { "date": "2026-04-28", "price": 10390 },
+                { "date": "2026-04-29", "price": 10390 },
+                { "date": "2026-05-01", "price": 10390 },
+                { "date": "2026-05-03", "price": 10390 },
+                { "date": "2026-05-04", "price": 10390 },
+                { "date": "2026-05-07", "price": 10390 },
+                { "date": "2026-05-13", "price": 9990 },
+                { "date": "2026-05-15", "price": 9987 },
+                { "date": "2026-05-16", "price": 9987 }
+              ]
+            },
+            {
+              "retailer": "Inet",
+              "url": "https://www.inet.se/produkt/5307669/amd-ryzen-9-9950x3d2-4-3ghz-208mb",
+              "history": [
+                { "date": "2026-04-28", "price": 10449 },
+                { "date": "2026-04-29", "price": 10399 },
+                { "date": "2026-05-01", "price": 10399 },
+                { "date": "2026-05-03", "price": 10399 },
+                { "date": "2026-05-04", "price": 10399 },
+                { "date": "2026-05-07", "price": 10399 },
+                { "date": "2026-05-13", "price": 10399 },
+                { "date": "2026-05-15", "price": 10399 },
+                { "date": "2026-05-16", "price": 10399 }
+              ]
+            },
+            {
+              "retailer": "Komplett",
+              "url": "https://www.komplett.se/product/1338752/datorutrustning/datorkomponenter/processor/amd-ryzen-9-9950x3d2-dual-edition-cpu",
+              "history": [
+                { "date": "2026-04-28", "price": 99999 },
+                { "date": "2026-04-29", "price": 10390 },
+                { "date": "2026-05-01", "price": 10390 },
+                { "date": "2026-05-03", "price": 10390 },
+                { "date": "2026-05-04", "price": 10390 },
+                { "date": "2026-05-07", "price": 10390 },
+                { "date": "2026-05-13", "price": 9989 },
+                { "date": "2026-05-15", "price": 9986 },
+                { "date": "2026-05-16", "price": 9986 }
+              ]
+            },
+            {
+              "retailer": "NetOnNet",
+              "url": "https://www.netonnet.se/art/datorkomponenter/processor/amd-am5-socket/amd-ryzen-9-9950x3d2-16c32t-5-6ghz-box/1065195.19286/",
+              "history": [
+                { "date": "2026-04-28", "price": 10390 },
+                { "date": "2026-04-29", "price": 10390 },
+                { "date": "2026-05-01", "price": 10390 },
+                { "date": "2026-05-03", "price": 10390 },
+                { "date": "2026-05-04", "price": 10390 },
+                { "date": "2026-05-07", "price": 10390 },
+                { "date": "2026-05-13", "price": 9986 },
+                { "date": "2026-05-15", "price": 9986 },
+                { "date": "2026-05-16", "price": 9986 }
+              ]
+            },
+            {
+              "retailer": "Proshop",
+              "url": "https://www.proshop.se/CPU/AMD-Ryzen-9-9950X3D2-Dual-Edition-CPU-16-kaernor-43-GHz-AMD-AM5-AMD-Boxed-utan-kylare/3456874",
+              "history": [
+                { "date": "2026-04-28", "price": 10390 },
+                { "date": "2026-04-29", "price": 10390 },
+                { "date": "2026-05-01", "price": 10390 },
+                { "date": "2026-05-03", "price": 10390 },
+                { "date": "2026-05-04", "price": 10390 },
+                { "date": "2026-05-07", "price": 10390 },
+                { "date": "2026-05-13", "price": 9990 },
+                { "date": "2026-05-15", "price": 9990 },
+                { "date": "2026-05-16", "price": 9990 }
+              ]
+            },
+            {
+              "retailer": "Webhallen",
+              "url": "https://www.webhallen.com/se/product/397499-AMD-Ryzen-9-9950X3D2-Dual-Edition-16-Cores-32-Threads-5-6GHz",
+              "history": [
+                { "date": "2026-04-28", "price": 10390 },
+                { "date": "2026-04-29", "price": 10390 },
+                { "date": "2026-05-01", "price": 10390 },
+                { "date": "2026-05-03", "price": 10390 },
+                { "date": "2026-05-04", "price": 10390 },
+                { "date": "2026-05-07", "price": 10390 },
+                { "date": "2026-05-13", "price": 9989 },
+                { "date": "2026-05-15", "price": 9989 },
+                { "date": "2026-05-16", "price": 9989 }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
