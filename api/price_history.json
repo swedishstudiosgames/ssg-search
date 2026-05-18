@@ -3,9 +3,9 @@
     {
       "product_id": "amd_ryzen_9_9950x3d2_dual_edition",
       "name": "AMD Ryzen 9 9950X3D2 Dual Edition",
-      "countries": {
-        "sweden": {
-          "currency": "SEK",
+      "countries": [
+        {
+          "country_code": "se",
           "price_history": [
             {
               "retailer": "Amazon Sweden",
@@ -114,7 +114,7 @@
             }
           ]
         }
-      }
+      ]
     }
   ]
 }
