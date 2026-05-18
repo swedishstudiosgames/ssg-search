@@ -1,0 +1,958 @@
+{
+  "countries": [
+    {
+      "country_code": "au",
+      "retailers": [
+        {
+          "retailer": "Amazon Australia",
+          "url": "https://www.amazon.com.au"
+        },
+        {
+          "retailer": "Big W",
+          "url": "https://www.bigw.com.au"
+        },
+        {
+          "retailer": "Bunnings Warehouse",
+          "url": "https://www.bunnings.com.au"
+        },
+        {
+          "retailer": "Catch.com.au",
+          "url": "https://www.catch.com.au"
+        },
+        {
+          "retailer": "Centre Com",
+          "url": "https://www.centrecom.com.au"
+        },
+        {
+          "retailer": "David Jones",
+          "url": "https://www.davidjones.com"
+        },
+        {
+          "retailer": "Harvey Norman",
+          "url": "https://www.harveynorman.com.au"
+        },
+        {
+          "retailer": "Ikea Australia",
+          "url": "https://www.ikea.com/au/en/"
+        },
+        {
+          "retailer": "JB Hi-Fi",
+          "url": "https://www.jbhifi.com.au"
+        },
+        {
+          "retailer": "JW Computers",
+          "url": "https://www.jw.com.au"
+        },
+        {
+          "retailer": "Kmart Australia",
+          "url": "https://www.kmart.com.au"
+        },
+        {
+          "retailer": "Kogan",
+          "url": "https://www.kogan.com/au/"
+        },
+        {
+          "retailer": "Mwave",
+          "url": "https://www.mwave.com.au"
+        },
+        {
+          "retailer": "Myer",
+          "url": "https://www.myer.com.au"
+        },
+        {
+          "retailer": "Officeworks",
+          "url": "https://www.officeworks.com.au"
+        },
+        {
+          "retailer": "PC Case Gear",
+          "url": "https://www.pccasegear.com"
+        },
+        {
+          "retailer": "PLE Computers",
+          "url": "https://www.ple.com.au"
+        },
+        {
+          "retailer": "Rebel Sport",
+          "url": "https://www.rebelsport.com.au"
+        },
+        {
+          "retailer": "Scorptec",
+          "url": "https://www.scorptec.com.au"
+        },
+        {
+          "retailer": "Supercheap Auto",
+          "url": "https://www.supercheapauto.com.au"
+        },
+        {
+          "retailer": "Target Australia",
+          "url": "https://www.target.com.au"
+        },
+        {
+          "retailer": "Temple & Webster",
+          "url": "https://www.templeandwebster.com.au"
+        },
+        {
+          "retailer": "Umart",
+          "url": "https://www.umart.com.au"
+        }
+      ]
+    },
+    {
+      "country_code": "ca",
+      "retailers": [
+        {
+          "retailer": "Amazon Canada",
+          "url": "https://www.amazon.ca"
+        },
+        {
+          "retailer": "Best Buy Canada",
+          "url": "https://www.bestbuy.ca"
+        },
+        {
+          "retailer": "Canada Computers",
+          "url": "https://www.canadacomputers.com"
+        },
+        {
+          "retailer": "Canadian Tire",
+          "url": "https://www.canadiantire.ca"
+        },
+        {
+          "retailer": "Home Depot Canada",
+          "url": "https://www.homedepot.ca"
+        },
+        {
+          "retailer": "Hudson's Bay",
+          "url": "https://www.thebay.com"
+        },
+        {
+          "retailer": "Ikea Canada",
+          "url": "https://www.ikea.com/ca/en/"
+        },
+        {
+          "retailer": "Indigo Books & Music",
+          "url": "https://www.chapters.indigo.ca"
+        },
+        {
+          "retailer": "London Drugs",
+          "url": "https://www.londondrugs.com"
+        },
+        {
+          "retailer": "Mark's",
+          "url": "https://www.marks.com"
+        },
+        {
+          "retailer": "Memory Express",
+          "url": "https://www.memoryexpress.com"
+        },
+        {
+          "retailer": "Newegg Canada",
+          "url": "https://www.newegg.ca"
+        },
+        {
+          "retailer": "PC-Canada",
+          "url": "https://www.pc-canada.com"
+        },
+        {
+          "retailer": "Rona",
+          "url": "https://www.rona.ca"
+        },
+        {
+          "retailer": "Shoppers Drug Mart",
+          "url": "https://www.shoppersdrugmart.ca"
+        },
+        {
+          "retailer": "Simons",
+          "url": "https://www.simons.ca"
+        },
+        {
+          "retailer": "Sport Chek",
+          "url": "https://www.sportchek.ca"
+        },
+        {
+          "retailer": "Walmart Canada",
+          "url": "https://www.walmart.ca"
+        },
+        {
+          "retailer": "Well.ca",
+          "url": "https://well.ca"
+        }
+      ]
+    },
+    {
+      "country_code": "dk",
+      "retailers": [
+        {
+          "retailer": "Bilka",
+          "url": "https://www.bilka.dk"
+        },
+        {
+          "retailer": "Biltema Denmark",
+          "url": "https://www.biltema.dk"
+        },
+        {
+          "retailer": "ComputerSalg",
+          "url": "https://www.computersalg.dk"
+        },
+        {
+          "retailer": "Coop Shopping",
+          "url": "https://shopping.coop.dk"
+        },
+        {
+          "retailer": "Dustin Home",
+          "url": "https://www.dustinhome.dk"
+        },
+        {
+          "retailer": "Elgiganten",
+          "url": "https://www.elgiganten.dk"
+        },
+        {
+          "retailer": "Føtex",
+          "url": "https://www.foetex.dk"
+        },
+        {
+          "retailer": "H&M Denmark",
+          "url": "https://www.hm.com"
+        },
+        {
+          "retailer": "Harald Nyborg",
+          "url": "https://www.harald-nyborg.dk"
+        },
+        {
+          "retailer": "Ikea Denmark",
+          "url": "https://www.ikea.dk"
+        },
+        {
+          "retailer": "Jem & Fix Denmark",
+          "url": "https://www.jemogfix.dk"
+        },
+        {
+          "retailer": "Jysk Denmark",
+          "url": "https://www.jysk.dk"
+        },
+        {
+          "retailer": "Komplett",
+          "url": "https://www.komplett.dk"
+        },
+        {
+          "retailer": "Lindex Denmark",
+          "url": "https://www.lindex.com"
+        },
+        {
+          "retailer": "Magasin du Nord",
+          "url": "https://www.magasin.dk"
+        },
+        {
+          "retailer": "Power",
+          "url": "https://www.power.dk"
+        },
+        {
+          "retailer": "Proshop",
+          "url": "https://www.proshop.dk"
+        },
+        {
+          "retailer": "Salling",
+          "url": "https://salling.dk"
+        }
+      ]
+    },
+    {
+      "country_code": "fi",
+      "retailers": [
+        {
+          "retailer": "Biltema Finland",
+          "url": "https://www.biltema.fi"
+        },
+        {
+          "retailer": "Dustin Home",
+          "url": "https://www.dustinhome.fi"
+        },
+        {
+          "retailer": "Gigantti",
+          "url": "https://www.gigantti.fi"
+        },
+        {
+          "retailer": "H&M Finland",
+          "url": "https://www.hm.com"
+        },
+        {
+          "retailer": "HalpaHalli",
+          "url": "https://www.halpahalli.fi"
+        },
+        {
+          "retailer": "Ikea Finland",
+          "url": "https://www.ikea.fi"
+        },
+        {
+          "retailer": "Jimm's PC-Store",
+          "url": "https://www.jimms.fi"
+        },
+        {
+          "retailer": "K-Citymarket",
+          "url": "https://www.k-ruoka.fi/k-citymarket"
+        },
+        {
+          "retailer": "K-Rauta",
+          "url": "https://www.k-rauta.fi"
+        },
+        {
+          "retailer": "Kärkkäinen",
+          "url": "https://www.karkkainen.com"
+        },
+        {
+          "retailer": "Lindex Finland",
+          "url": "https://www.lindex.com"
+        },
+        {
+          "retailer": "Motonet",
+          "url": "https://www.motonet.fi"
+        },
+        {
+          "retailer": "Multitronic",
+          "url": "https://www.multitronic.fi"
+        },
+        {
+          "retailer": "Power",
+          "url": "https://www.power.fi"
+        },
+        {
+          "retailer": "Prisma",
+          "url": "https://www.prisma.fi"
+        },
+        {
+          "retailer": "Proshop",
+          "url": "https://www.proshop.fi"
+        },
+        {
+          "retailer": "Puuilo",
+          "url": "https://www.puuilo.fi"
+        },
+        {
+          "retailer": "Stockmann",
+          "url": "https://www.stockmann.com"
+        },
+        {
+          "retailer": "Tokmanni",
+          "url": "https://www.tokmanni.fi"
+        },
+        {
+          "retailer": "Verkkokauppa",
+          "url": "https://www.verkkokauppa.com"
+        }
+      ]
+    },
+    {
+      "country_code": "de",
+      "retailers": [
+        {
+          "retailer": "Alternate",
+          "url": "https://www.alternate.de"
+        },
+        {
+          "retailer": "Amazon Germany",
+          "url": "https://www.amazon.de"
+        },
+        {
+          "retailer": "Arlt Computer",
+          "url": "https://www.arlt.com"
+        },
+        {
+          "retailer": "Bauhaus Germany",
+          "url": "https://www.bauhaus.info"
+        },
+        {
+          "retailer": "Caseking",
+          "url": "https://www.caseking.de"
+        },
+        {
+          "retailer": "Computeruniverse",
+          "url": "https://www.computeruniverse.net"
+        },
+        {
+          "retailer": "Cyberport",
+          "url": "https://www.cyberport.de"
+        },
+        {
+          "retailer": "DM Drogerie",
+          "url": "https://www.dm.de"
+        },
+        {
+          "retailer": "H&M Germany",
+          "url": "https://www.hm.com"
+        },
+        {
+          "retailer": "Hornbach Germany",
+          "url": "https://www.hornbach.de"
+        },
+        {
+          "retailer": "Ikea Germany",
+          "url": "https://www.ikea.com/de/de/"
+        },
+        {
+          "retailer": "Kaufland",
+          "url": "https://www.kaufland.de"
+        },
+        {
+          "retailer": "Lidl Germany",
+          "url": "https://www.lidl.de"
+        },
+        {
+          "retailer": "MediaMarkt Germany",
+          "url": "https://www.mediamarkt.de"
+        },
+        {
+          "retailer": "Mindfactory",
+          "url": "https://www.mindfactory.de"
+        },
+        {
+          "retailer": "Notebooksbilliger",
+          "url": "https://www.notebooksbilliger.de"
+        },
+        {
+          "retailer": "Obi",
+          "url": "https://www.obi.de"
+        },
+        {
+          "retailer": "Otto",
+          "url": "https://www.otto.de"
+        },
+        {
+          "retailer": "Rossmann",
+          "url": "https://www.rossmann.de"
+        },
+        {
+          "retailer": "Saturn",
+          "url": "https://www.saturn.de"
+        },
+        {
+          "retailer": "Tchibo",
+          "url": "https://www.tchibo.de"
+        },
+        {
+          "retailer": "Toom Baumarkt",
+          "url": "https://toom.de"
+        },
+        {
+          "retailer": "Zalando",
+          "url": "https://www.zalando.de"
+        }
+      ]
+    },
+    {
+      "country_code": "jp",
+      "retailers": [
+        {
+          "retailer": "Amazon Japan",
+          "url": "https://www.amazon.co.jp"
+        },
+        {
+          "retailer": "Bic Camera",
+          "url": "https://www.biccamera.com"
+        },
+        {
+          "retailer": "Computer Shop Ark",
+          "url": "https://www.ark-pc.co.jp"
+        },
+        {
+          "retailer": "Dospara",
+          "url": "https://www.dospara.co.jp"
+        },
+        {
+          "retailer": "Ikea Japan",
+          "url": "https://www.ikea.com/jp/ja/"
+        },
+        {
+          "retailer": "Kojima",
+          "url": "https://www.kojima.net"
+        },
+        {
+          "retailer": "Lohaco",
+          "url": "https://lohaco.yahoo.co.jp"
+        },
+        {
+          "retailer": "Mercari Japan",
+          "url": "https://jp.mercari.com"
+        },
+        {
+          "retailer": "Muji Japan",
+          "url": "https://www.muji.com/jp/ja/"
+        },
+        {
+          "retailer": "Nitori",
+          "url": "https://www.nitori-net.jp"
+        },
+        {
+          "retailer": "Nojima Online",
+          "url": "https://online.nojima.co.jp"
+        },
+        {
+          "retailer": "PC Koubou",
+          "url": "https://www.pc-koubou.jp"
+        },
+        {
+          "retailer": "Rakuten",
+          "url": "https://www.rakuten.co.jp"
+        },
+        {
+          "retailer": "Sofmap",
+          "url": "https://www.sofmap.com"
+        },
+        {
+          "retailer": "Tsukumo",
+          "url": "https://www.tsukumo.co.jp"
+        },
+        {
+          "retailer": "Yahoo! Japan Shopping",
+          "url": "https://shopping.yahoo.co.jp"
+        },
+        {
+          "retailer": "Yamada Denki",
+          "url": "https://www.yamada-denkiweb.com"
+        },
+        {
+          "retailer": "Yodobashi Camera",
+          "url": "https://www.yodobashi.com"
+        },
+        {
+          "retailer": "ZozoTown",
+          "url": "https://zozo.jp"
+        }
+      ]
+    },
+    {
+      "country_code": "no",
+      "retailers": [
+        {
+          "retailer": "Biltema Norway",
+          "url": "https://www.biltema.no"
+        },
+        {
+          "retailer": "Clas Ohlson Norway",
+          "url": "https://www.clasohlson.com/no/"
+        },
+        {
+          "retailer": "Coop Obs",
+          "url": "https://www.coop.no/obs"
+        },
+        {
+          "retailer": "Digital Impuls",
+          "url": "https://www.digitalimpuls.no"
+        },
+        {
+          "retailer": "Dustin Home",
+          "url": "https://www.dustinhome.no"
+        },
+        {
+          "retailer": "Elkjøp",
+          "url": "https://www.elkjop.no"
+        },
+        {
+          "retailer": "Europris",
+          "url": "https://www.europris.no"
+        },
+        {
+          "retailer": "H&M Norway",
+          "url": "https://www.hm.com"
+        },
+        {
+          "retailer": "Ikea Norway",
+          "url": "https://www.ikea.no"
+        },
+        {
+          "retailer": "Jernia",
+          "url": "https://www.jernia.no"
+        },
+        {
+          "retailer": "Jula Norway",
+          "url": "https://www.jula.no"
+        },
+        {
+          "retailer": "Komplett",
+          "url": "https://www.komplett.no"
+        },
+        {
+          "retailer": "Lindex Norway",
+          "url": "https://www.lindex.com"
+        },
+        {
+          "retailer": "MegaFlis",
+          "url": "https://www.megaflis.no"
+        },
+        {
+          "retailer": "Multicom",
+          "url": "https://www.multicom.no"
+        },
+        {
+          "retailer": "NetOnNet",
+          "url": "https://www.netonnet.no"
+        },
+        {
+          "retailer": "Power",
+          "url": "https://www.power.no"
+        },
+        {
+          "retailer": "Proshop",
+          "url": "https://www.proshop.no"
+        },
+        {
+          "retailer": "Sparkjøp",
+          "url": "https://www.sparkjop.no"
+        }
+      ]
+    },
+    {
+      "country_code": "se",
+      "retailers": [
+        {
+          "retailer": "Adlibris",
+          "url": "https://www.adlibris.com/se"
+        },
+        {
+          "retailer": "Alina",
+          "url": "https://www.alina.se"
+        },
+        {
+          "retailer": "Amazon Sweden",
+          "url": "https://www.amazon.se"
+        },
+        {
+          "retailer": "Apohem",
+          "url": "https://www.apohem.se"
+        },
+        {
+          "retailer": "Apotea",
+          "url": "https://www.apotea.se"
+        },
+        {
+          "retailer": "Babyland",
+          "url": "https://www.babyland.se"
+        },
+        {
+          "retailer": "Bauhaus Sweden",
+          "url": "https://www.bauhaus.se"
+        },
+        {
+          "retailer": "Biltema Sweden",
+          "url": "https://www.biltema.se"
+        },
+        {
+          "retailer": "Bokus",
+          "url": "https://www.bokus.com"
+        },
+        {
+          "retailer": "Boozt",
+          "url": "https://www.boozt.com"
+        },
+        {
+          "retailer": "Bygghemma",
+          "url": "https://www.bygghemma.se"
+        },
+        {
+          "retailer": "Byggmax",
+          "url": "https://www.byggmax.se"
+        },
+        {
+          "retailer": "Clas Ohlson",
+          "url": "https://www.clasohlson.se"
+        },
+        {
+          "retailer": "ComputerSalg",
+          "url": "https://www.computersalg.se"
+        },
+        {
+          "retailer": "Dustin Home",
+          "url": "https://www.dustinhome.se"
+        },
+        {
+          "retailer": "Elgiganten",
+          "url": "https://www.elgiganten.se"
+        },
+        {
+          "retailer": "Gymgrossisten",
+          "url": "https://www.gymgrossisten.com"
+        },
+        {
+          "retailer": "H&M Sweden",
+          "url": "https://www.hm.com"
+        },
+        {
+          "retailer": "Hemtex",
+          "url": "https://www.hemtex.se"
+        },
+        {
+          "retailer": "Hornbach Sweden",
+          "url": "https://www.hornbach.se"
+        },
+        {
+          "retailer": "Ikea Sweden",
+          "url": "https://www.ikea.se"
+        },
+        {
+          "retailer": "Inet",
+          "url": "https://www.inet.se"
+        },
+        {
+          "retailer": "Jollyroom",
+          "url": "https://www.jollyroom.se"
+        },
+        {
+          "retailer": "Jula Sweden",
+          "url": "https://www.jula.se"
+        },
+        {
+          "retailer": "K-Rauta Sweden",
+          "url": "https://www.k-rauta.se"
+        },
+        {
+          "retailer": "Kjell & Company",
+          "url": "https://www.kjell.com"
+        },
+        {
+          "retailer": "Komplett",
+          "url": "https://www.komplett.se"
+        },
+        {
+          "retailer": "Lindex Sweden",
+          "url": "https://www.lindex.com"
+        },
+        {
+          "retailer": "MaxGaming",
+          "url": "https://www.maxgaming.se"
+        },
+        {
+          "retailer": "Meds",
+          "url": "https://www.meds.se"
+        },
+        {
+          "retailer": "Mio",
+          "url": "https://www.mio.se"
+        },
+        {
+          "retailer": "NetOnNet",
+          "url": "https://www.netonnet.se"
+        },
+        {
+          "retailer": "Power",
+          "url": "https://www.power.se"
+        },
+        {
+          "retailer": "Proshop",
+          "url": "https://www.proshop.se"
+        },
+        {
+          "retailer": "Rusta",
+          "url": "https://www.rusta.com"
+        },
+        {
+          "retailer": "Teknikdelar",
+          "url": "https://www.teknikdelar.se"
+        },
+        {
+          "retailer": "Webhallen",
+          "url": "https://www.webhallen.com"
+        },
+        {
+          "retailer": "Zalando Sweden",
+          "url": "https://www.zalando.se"
+        }
+      ]
+    },
+    {
+      "country_code": "gb",
+      "retailers": [
+        {
+          "retailer": "Amazon UK",
+          "url": "https://www.amazon.co.uk"
+        },
+        {
+          "retailer": "Argos",
+          "url": "https://www.argos.co.uk"
+        },
+        {
+          "retailer": "ASOS",
+          "url": "https://www.asos.com"
+        },
+        {
+          "retailer": "AWD-IT",
+          "url": "https://www.awd-it.co.uk"
+        },
+        {
+          "retailer": "B&Q",
+          "url": "https://www.diy.com"
+        },
+        {
+          "retailer": "Boots",
+          "url": "https://www.boots.com"
+        },
+        {
+          "retailer": "CCL Computers",
+          "url": "https://www.cclonline.com"
+        },
+        {
+          "retailer": "Currys",
+          "url": "https://www.currys.co.uk"
+        },
+        {
+          "retailer": "Ebuyer",
+          "url": "https://www.ebuyer.com"
+        },
+        {
+          "retailer": "H&M UK",
+          "url": "https://www.hm.com"
+        },
+        {
+          "retailer": "Halfords",
+          "url": "https://www.halfords.com"
+        },
+        {
+          "retailer": "Homebase",
+          "url": "https://www.homebase.co.uk"
+        },
+        {
+          "retailer": "Ikea UK",
+          "url": "https://www.ikea.com/gb/en/"
+        },
+        {
+          "retailer": "John Lewis",
+          "url": "https://www.johnlewis.com"
+        },
+        {
+          "retailer": "Marks & Spencer",
+          "url": "https://www.marksandspencer.com"
+        },
+        {
+          "retailer": "Next",
+          "url": "https://www.next.co.uk"
+        },
+        {
+          "retailer": "Novatech",
+          "url": "https://www.novatech.co.uk"
+        },
+        {
+          "retailer": "Overclockers UK",
+          "url": "https://www.overclockers.co.uk"
+        },
+        {
+          "retailer": "Scan Computers",
+          "url": "https://www.scan.co.uk"
+        },
+        {
+          "retailer": "Screwfix",
+          "url": "https://www.screwfix.com"
+        },
+        {
+          "retailer": "Superdrug",
+          "url": "https://www.superdrug.com"
+        },
+        {
+          "retailer": "Very",
+          "url": "https://www.very.co.uk"
+        },
+        {
+          "retailer": "WHSmith",
+          "url": "https://www.whsmith.co.uk"
+        },
+        {
+          "retailer": "Wickes",
+          "url": "https://www.wickes.co.uk"
+        }
+      ]
+    },
+    {
+      "country_code": "us",
+      "retailers": [
+        {
+          "retailer": "Adorama",
+          "url": "https://www.adorama.com"
+        },
+        {
+          "retailer": "Amazon USA",
+          "url": "https://www.amazon.com"
+        },
+        {
+          "retailer": "B&H Photo Video",
+          "url": "https://www.bhphotovideo.com"
+        },
+        {
+          "retailer": "Best Buy",
+          "url": "https://www.bestbuy.com"
+        },
+        {
+          "retailer": "Chewy",
+          "url": "https://www.chewy.com"
+        },
+        {
+          "retailer": "Costco",
+          "url": "https://www.costco.com"
+        },
+        {
+          "retailer": "CVS Pharmacy",
+          "url": "https://www.cvs.com"
+        },
+        {
+          "retailer": "Dick's Sporting Goods",
+          "url": "https://www.dickssportinggoods.com"
+        },
+        {
+          "retailer": "eBay",
+          "url": "https://www.ebay.com"
+        },
+        {
+          "retailer": "Home Depot",
+          "url": "https://www.homedepot.com"
+        },
+        {
+          "retailer": "Ikea USA",
+          "url": "https://www.ikea.com/us/en/"
+        },
+        {
+          "retailer": "Kohl's",
+          "url": "https://www.kohls.com"
+        },
+        {
+          "retailer": "Lowe's",
+          "url": "https://www.lowes.com"
+        },
+        {
+          "retailer": "Macy's",
+          "url": "https://www.macys.com"
+        },
+        {
+          "retailer": "Micro Center",
+          "url": "https://www.microcenter.com"
+        },
+        {
+          "retailer": "Newegg",
+          "url": "https://www.newegg.com"
+        },
+        {
+          "retailer": "Nordstrom",
+          "url": "https://www.nordstrom.com"
+        },
+        {
+          "retailer": "REI",
+          "url": "https://www.rei.com"
+        },
+        {
+          "retailer": "Sam's Club",
+          "url": "https://www.samsclub.com"
+        },
+        {
+          "retailer": "Target",
+          "url": "https://www.target.com"
+        },
+        {
+          "retailer": "Walgreens",
+          "url": "https://www.walgreens.com"
+        },
+        {
+          "retailer": "Walmart",
+          "url": "https://www.walmart.com"
+        },
+        {
+          "retailer": "Wayfair",
+          "url": "https://www.wayfair.com"
+        }
+      ]
+    }
+  ]
+}
