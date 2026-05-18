@@ -47,11 +47,38 @@
         "frequency_mhz": 2200
       },
       "compatibility": {
-        "chipsets": ["X870E", "X870", "X670E", "X670", "B650E", "B650", "A620"],
-        "os_support": ["Windows 10/11 x64", "RHEL", "Ubuntu"]
+        "chipsets": [
+          "X870E",
+          "X870",
+          "X670E",
+          "X670",
+          "B650E",
+          "B650",
+          "A620"
+        ],
+        "os_support": [
+          "Windows 10/11 x64",
+          "RHEL",
+          "Ubuntu"
+        ]
       },
       "extensions": [
-        "AES", "AMD-V", "AVX", "AVX-512", "AVX2", "FMA3", "MMX(+)", "SHA", "SSE", "SSE2", "SSE3", "SSE4.1", "SSE4.2", "SSE4A", "SSSE3", "x86-64"
+        "AES",
+        "AMD-V",
+        "AVX",
+        "AVX-512",
+        "AVX2",
+        "FMA3",
+        "MMX(+)",
+        "SHA",
+        "SSE",
+        "SSE2",
+        "SSE3",
+        "SSE4.1",
+        "SSE4.2",
+        "SSE4A",
+        "SSSE3",
+        "x86-64"
       ],
       "security_features": [
         "AMD Secure Processor",
@@ -61,103 +88,6 @@
         "Firmware TPM",
         "Advanced Encryption Standard New Instructions (AES-NI)"
       ]
-    },
-    {
-      "product_id": "intel_core_ultra_9_285k",
-      "category": "Processor",
-      "details": {
-        "product_name": "Intel Core Ultra 9 285K",
-        "architecture": "Arrow Lake-S",
-        "socket": "LGA 1851",
-        "cores": 24,
-        "threads": 24,
-        "base_clock_ghz": 3.2,
-        "boost_clock_ghz": 5.7,
-        "tdp_w": 125,
-        "max_temp_c": 105,
-        "package_die_count": 4,
-        "lithography_cpu": "TSMC 3 nm (Compute Tile)",
-        "lithography_io": "TSMC 6 nm (SoC Tile)",
-        "multithreading_smt": "Not Supported",
-        "unlocked_for_overclocking": "Yes",
-        "extreme_tuning_utility": "Supported"
-      },
-      "cache": {
-        "l1": "2400 KB",
-        "l2": "40 MB",
-        "l3": "36 MB",
-        "total": "78.4 MB"
-      },
-      "memory": {
-        "ram_generation": "DDR5",
-        "max_memory": "192 GB (Dual Channel)",
-        "memory_subtype": "UDIMM / CUDIMM",
-        "intel_xmp": "Supported (XMP 3.0)"
-      },
-      "storage_and_connectivity": {
-        "pcie_version": "PCIe 5.0",
-        "pcie_lanes_total_usable": "24 / 20",
-        "nvme_support": "Boot, RAID0, RAID1, RAID5, RAID10",
-        "thunderbolt": "Thunderbolt 4 Supported"
-      },
-      "integrated_graphics": {
-        "model": "Intel® Arc™ Graphics",
-        "cores": 4,
-        "frequency_mhz": 2000
-      },
-      "compatibility": {
-        "chipsets": ["Z890", "H870", "B860", "H810"],
-        "os_support": ["Windows 11 x64", "Linux"]
-      },
-      "extensions": [
-        "AES-NI", "AVX", "AVX2", "Intel 64", "SSE4.1", "SSE4.2", "VT-x", "VT-d", "Intel Thread Director"
-      ],
-      "security_features": [
-        "Intel OS Guard",
-        "Intel Boot Guard",
-        "Intel Secure Key",
-        "Intel Control-Flow Enforcement Technology"
-      ]
-    },
-    {
-      "product_id": "nvidia_geforce_rtx_5090",
-      "category": "Graphics Card",
-      "details": {
-        "product_name": "NVIDIA GeForce RTX 5090",
-        "architecture": "Blackwell",
-        "interface": "PCIe 5.0 x16",
-        "cuda_cores": 21760,
-        "tensor_cores": 680,
-        "rt_cores": 170,
-        "base_clock_mhz": 2235,
-        "boost_clock_mhz": 2900,
-        "tdp_w": 500,
-        "max_temp_c": 90,
-        "lithography_gpu": "TSMC 4NP"
-      },
-      "memory": {
-        "vram_capacity": "32 GB",
-        "vram_type": "GDDR7",
-        "memory_bus": "512-bit",
-        "memory_bandwidth_gbs": 1792,
-        "memory_speed_gbps": 28
-      },
-      "features_and_connectivity": {
-        "ray_tracing": "4th Gen RT Cores",
-        "dlss": "DLSS 4.0 with Frame Generation",
-        "nvenc": "Dual 9th Gen AV1 Encoders",
-        "display_outputs": "3x DisplayPort 2.1a, 1x HDMI 2.1a",
-        "power_connector": "1x 16-pin 12V-2x6"
-      },
-      "dimensions": {
-        "length_mm": 310,
-        "width_slots": 2.5,
-        "form_factor": "ATX"
-      },
-      "compatibility": {
-        "api_support": ["DirectX 12 Ultimate", "Vulkan 1.3", "OpenGL 4.6"],
-        "os_support": ["Windows 11 x64", "Linux"]
-      }
     }
   ]
 }
