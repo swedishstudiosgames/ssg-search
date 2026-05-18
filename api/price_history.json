@@ -6,6 +6,7 @@
       "countries": [
         {
           "country_code": "se",
+          "currency_code": "SEK",
           "price_history": [
             {
               "retailer": "Amazon Sweden",
