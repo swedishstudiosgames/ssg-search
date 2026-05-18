@@ -1,6 +1,7 @@
 {
-  "countries": {
-    "australia": {
+  "countries": [
+    {
+      "country_code": "au",
       "retailers": [
         {
           "retailer": "Amazon Australia",
@@ -96,7 +97,8 @@
         }
       ]
     },
-    "canada": {
+    {
+      "country_code": "ca",
       "retailers": [
         {
           "retailer": "Amazon Canada",
@@ -176,7 +178,8 @@
         }
       ]
     },
-    "denmark": {
+    {
+      "country_code": "dk",
       "retailers": [
         {
           "retailer": "Bilka",
@@ -252,7 +255,8 @@
         }
       ]
     },
-    "finland": {
+    {
+      "country_code": "fi",
       "retailers": [
         {
           "retailer": "Biltema Finland",
@@ -336,7 +340,8 @@
         }
       ]
     },
-    "germany": {
+    {
+      "country_code": "de",
       "retailers": [
         {
           "retailer": "Alternate",
@@ -432,7 +437,8 @@
         }
       ]
     },
-    "japan": {
+    {
+      "country_code": "jp",
       "retailers": [
         {
           "retailer": "Amazon Japan",
@@ -512,7 +518,8 @@
         }
       ]
     },
-    "norway": {
+    {
+      "country_code": "no",
       "retailers": [
         {
           "retailer": "Biltema Norway",
@@ -592,7 +599,8 @@
         }
       ]
     },
-    "sweden": {
+    {
+      "country_code": "se",
       "retailers": [
         {
           "retailer": "Adlibris",
@@ -748,7 +756,8 @@
         }
       ]
     },
-    "united_kingdom": {
+    {
+      "country_code": "gb",
       "retailers": [
         {
           "retailer": "Amazon UK",
@@ -848,7 +857,8 @@
         }
       ]
     },
-    "united_states": {
+    {
+      "country_code": "us",
       "retailers": [
         {
           "retailer": "Adorama",
@@ -944,5 +954,5 @@
         }
       ]
     }
-  }
+  ]
 }
