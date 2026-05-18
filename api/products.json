@@ -2,118 +2,161 @@
   "products": [
     {
       "product_id": "amd_ryzen_9_9950x3d2_dual_edition",
-      "name": "AMD Ryzen 9 9950X3D2 Dual Edition",
-      "countries": {
-        "sweden": {
-          "currency": "SEK",
-          "price_history": [
-            {
-              "retailer": "Amazon Sweden",
-              "url": "https://www.amazon.se/-/en/AMD-100-100001978WOF/dp/B0GTRTJSNZ/",
-              "history": [
-                { "date": "2026-04-28", "price": 10420 },
-                { "date": "2026-04-29", "price": 10390 },
-                { "date": "2026-05-01", "price": 10388 },
-                { "date": "2026-05-03", "price": 10390 },
-                { "date": "2026-05-04", "price": 10390 },
-                { "date": "2026-05-07", "price": 10390 },
-                { "date": "2026-05-13", "price": 9986 },
-                { "date": "2026-05-15", "price": 9986 },
-                { "date": "2026-05-16", "price": 9986 }
-              ]
-            },
-            {
-              "retailer": "Elgiganten",
-              "url": "https://www.elgiganten.se/product/gaming/datorkomponenter/processor-cpu/amd-ryzen-9-9950x3d2-processor/1083223",
-              "history": [
-                { "date": "2026-04-28", "price": 10390 },
-                { "date": "2026-04-29", "price": 10390 },
-                { "date": "2026-05-01", "price": 10390 },
-                { "date": "2026-05-03", "price": 10390 },
-                { "date": "2026-05-04", "price": 10390 },
-                { "date": "2026-05-07", "price": 10390 },
-                { "date": "2026-05-13", "price": 9990 },
-                { "date": "2026-05-15", "price": 9987 },
-                { "date": "2026-05-16", "price": 9987 }
-              ]
-            },
-            {
-              "retailer": "Inet",
-              "url": "https://www.inet.se/produkt/5307669/amd-ryzen-9-9950x3d2-4-3ghz-208mb",
-              "history": [
-                { "date": "2026-04-28", "price": 10449 },
-                { "date": "2026-04-29", "price": 10399 },
-                { "date": "2026-05-01", "price": 10399 },
-                { "date": "2026-05-03", "price": 10399 },
-                { "date": "2026-05-04", "price": 10399 },
-                { "date": "2026-05-07", "price": 10399 },
-                { "date": "2026-05-13", "price": 10399 },
-                { "date": "2026-05-15", "price": 10399 },
-                { "date": "2026-05-16", "price": 10399 }
-              ]
-            },
-            {
-              "retailer": "Komplett",
-              "url": "https://www.komplett.se/product/1338752/datorutrustning/datorkomponenter/processor/amd-ryzen-9-9950x3d2-dual-edition-cpu",
-              "history": [
-                { "date": "2026-04-28", "price": 99999 },
-                { "date": "2026-04-29", "price": 10390 },
-                { "date": "2026-05-01", "price": 10390 },
-                { "date": "2026-05-03", "price": 10390 },
-                { "date": "2026-05-04", "price": 10390 },
-                { "date": "2026-05-07", "price": 10390 },
-                { "date": "2026-05-13", "price": 9989 },
-                { "date": "2026-05-15", "price": 9986 },
-                { "date": "2026-05-16", "price": 9986 }
-              ]
-            },
-            {
-              "retailer": "NetOnNet",
-              "url": "https://www.netonnet.se/art/datorkomponenter/processor/amd-am5-socket/amd-ryzen-9-9950x3d2-16c32t-5-6ghz-box/1065195.19286/",
-              "history": [
-                { "date": "2026-04-28", "price": 10390 },
-                { "date": "2026-04-29", "price": 10390 },
-                { "date": "2026-05-01", "price": 10390 },
-                { "date": "2026-05-03", "price": 10390 },
-                { "date": "2026-05-04", "price": 10390 },
-                { "date": "2026-05-07", "price": 10390 },
-                { "date": "2026-05-13", "price": 9986 },
-                { "date": "2026-05-15", "price": 9986 },
-                { "date": "2026-05-16", "price": 9986 }
-              ]
-            },
-            {
-              "retailer": "Proshop",
-              "url": "https://www.proshop.se/CPU/AMD-Ryzen-9-9950X3D2-Dual-Edition-CPU-16-kaernor-43-GHz-AMD-AM5-AMD-Boxed-utan-kylare/3456874",
-              "history": [
-                { "date": "2026-04-28", "price": 10390 },
-                { "date": "2026-04-29", "price": 10390 },
-                { "date": "2026-05-01", "price": 10390 },
-                { "date": "2026-05-03", "price": 10390 },
-                { "date": "2026-05-04", "price": 10390 },
-                { "date": "2026-05-07", "price": 10390 },
-                { "date": "2026-05-13", "price": 9990 },
-                { "date": "2026-05-15", "price": 9990 },
-                { "date": "2026-05-16", "price": 9990 }
-              ]
-            },
-            {
-              "retailer": "Webhallen",
-              "url": "https://www.webhallen.com/se/product/397499-AMD-Ryzen-9-9950X3D2-Dual-Edition-16-Cores-32-Threads-5-6GHz",
-              "history": [
-                { "date": "2026-04-28", "price": 10390 },
-                { "date": "2026-04-29", "price": 10390 },
-                { "date": "2026-05-01", "price": 10390 },
-                { "date": "2026-05-03", "price": 10390 },
-                { "date": "2026-05-04", "price": 10390 },
-                { "date": "2026-05-07", "price": 10390 },
-                { "date": "2026-05-13", "price": 9989 },
-                { "date": "2026-05-15", "price": 9989 },
-                { "date": "2026-05-16", "price": 9989 }
-              ]
-            }
-          ]
-        }
+      "category": "Processor",
+      "details": {
+        "product_name": "AMD Ryzen 9 9950X3D2 Dual Edition",
+        "architecture": "Zen 5 (Granite Ridge)",
+        "socket": "AM5",
+        "cores": 16,
+        "threads": 32,
+        "base_clock_ghz": 4.3,
+        "boost_clock_ghz": 5.6,
+        "tdp_w": 200,
+        "max_temp_c": 95,
+        "package_die_count": 3,
+        "lithography_cpu": "TSMC 4 nm FinFET",
+        "lithography_io": "TSMC 6 nm FinFET",
+        "multithreading_smt": "Supported",
+        "unlocked_for_overclocking": "Yes (Precision Boost Overdrive)",
+        "curve_optimizer": "Supported",
+        "ryzen_master_support": "Supported"
+      },
+      "cache": {
+        "l1": "1280 KB",
+        "l2": "16 MB",
+        "l3": "192 MB (Dual 3D V-Cache)",
+        "total": "208 MB"
+      },
+      "memory": {
+        "ram_generation": "DDR5 (ECC Supported)",
+        "max_memory": "256 GB (Dual Channel)",
+        "memory_subtype": "UDIMM",
+        "amd_expo": "Supported"
+      },
+      "storage_and_connectivity": {
+        "pcie_version": "PCIe 5.0",
+        "pcie_lanes_total_usable": "28 / 24",
+        "nvme_support": "Boot, RAID0, RAID1, RAID10",
+        "usb_3_2_gen2": "4 Ports (10Gbps)",
+        "usb_2_0": "1 Port (480Mbps)",
+        "type_c_dp_alt_mode": "Supported"
+      },
+      "integrated_graphics": {
+        "model": "AMD Radeon™ Graphics",
+        "cores": 2,
+        "frequency_mhz": 2200
+      },
+      "compatibility": {
+        "chipsets": ["X870E", "X870", "X670E", "X670", "B650E", "B650", "A620"],
+        "os_support": ["Windows 10/11 x64", "RHEL", "Ubuntu"]
+      },
+      "extensions": [
+        "AES", "AMD-V", "AVX", "AVX-512", "AVX2", "FMA3", "MMX(+)", "SHA", "SSE", "SSE2", "SSE3", "SSE4.1", "SSE4.2", "SSE4A", "SSSE3", "x86-64"
+      ],
+      "security_features": [
+        "AMD Secure Processor",
+        "AMD Platform Secure Boot",
+        "Windows Secure Boot",
+        "Virtualization-Based Security (VBS)",
+        "Firmware TPM",
+        "Advanced Encryption Standard New Instructions (AES-NI)"
+      ]
+    },
+    {
+      "product_id": "intel_core_ultra_9_285k",
+      "category": "Processor",
+      "details": {
+        "product_name": "Intel Core Ultra 9 285K",
+        "architecture": "Arrow Lake-S",
+        "socket": "LGA 1851",
+        "cores": 24,
+        "threads": 24,
+        "base_clock_ghz": 3.2,
+        "boost_clock_ghz": 5.7,
+        "tdp_w": 125,
+        "max_temp_c": 105,
+        "package_die_count": 4,
+        "lithography_cpu": "TSMC 3 nm (Compute Tile)",
+        "lithography_io": "TSMC 6 nm (SoC Tile)",
+        "multithreading_smt": "Not Supported",
+        "unlocked_for_overclocking": "Yes",
+        "extreme_tuning_utility": "Supported"
+      },
+      "cache": {
+        "l1": "2400 KB",
+        "l2": "40 MB",
+        "l3": "36 MB",
+        "total": "78.4 MB"
+      },
+      "memory": {
+        "ram_generation": "DDR5",
+        "max_memory": "192 GB (Dual Channel)",
+        "memory_subtype": "UDIMM / CUDIMM",
+        "intel_xmp": "Supported (XMP 3.0)"
+      },
+      "storage_and_connectivity": {
+        "pcie_version": "PCIe 5.0",
+        "pcie_lanes_total_usable": "24 / 20",
+        "nvme_support": "Boot, RAID0, RAID1, RAID5, RAID10",
+        "thunderbolt": "Thunderbolt 4 Supported"
+      },
+      "integrated_graphics": {
+        "model": "Intel® Arc™ Graphics",
+        "cores": 4,
+        "frequency_mhz": 2000
+      },
+      "compatibility": {
+        "chipsets": ["Z890", "H870", "B860", "H810"],
+        "os_support": ["Windows 11 x64", "Linux"]
+      },
+      "extensions": [
+        "AES-NI", "AVX", "AVX2", "Intel 64", "SSE4.1", "SSE4.2", "VT-x", "VT-d", "Intel Thread Director"
+      ],
+      "security_features": [
+        "Intel OS Guard",
+        "Intel Boot Guard",
+        "Intel Secure Key",
+        "Intel Control-Flow Enforcement Technology"
+      ]
+    },
+    {
+      "product_id": "nvidia_geforce_rtx_5090",
+      "category": "Graphics Card",
+      "details": {
+        "product_name": "NVIDIA GeForce RTX 5090",
+        "architecture": "Blackwell",
+        "interface": "PCIe 5.0 x16",
+        "cuda_cores": 21760,
+        "tensor_cores": 680,
+        "rt_cores": 170,
+        "base_clock_mhz": 2235,
+        "boost_clock_mhz": 2900,
+        "tdp_w": 500,
+        "max_temp_c": 90,
+        "lithography_gpu": "TSMC 4NP"
+      },
+      "memory": {
+        "vram_capacity": "32 GB",
+        "vram_type": "GDDR7",
+        "memory_bus": "512-bit",
+        "memory_bandwidth_gbs": 1792,
+        "memory_speed_gbps": 28
+      },
+      "features_and_connectivity": {
+        "ray_tracing": "4th Gen RT Cores",
+        "dlss": "DLSS 4.0 with Frame Generation",
+        "nvenc": "Dual 9th Gen AV1 Encoders",
+        "display_outputs": "3x DisplayPort 2.1a, 1x HDMI 2.1a",
+        "power_connector": "1x 16-pin 12V-2x6"
+      },
+      "dimensions": {
+        "length_mm": 310,
+        "width_slots": 2.5,
+        "form_factor": "ATX"
+      },
+      "compatibility": {
+        "api_support": ["DirectX 12 Ultimate", "Vulkan 1.3", "OpenGL 4.6"],
+        "os_support": ["Windows 11 x64", "Linux"]
       }
     }
   ]
