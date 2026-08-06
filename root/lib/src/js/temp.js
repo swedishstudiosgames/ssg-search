@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const baseUrl = currentMode === 'store' 
                 ? 'https://store.swedishstudiosgames.com/search' 
-                : 'https://search.bexng.com/search';
+                : 'https://search.bexy.se/search';
             
             window.location.href = `${baseUrl}?q=${encodeURIComponent(query)}`;
         }
