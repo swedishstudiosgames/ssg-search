@@ -147,7 +147,7 @@ div.c {
 }
 
 #mdd button:hover { background-color: #3b3b3b; color: #fff; }
-#mdd button.active { background-color: #333; color: var(--primary-blue); font-weight: 700; }
+#mdd button.active { background-color: #333; color: var(--primary-blue); font-weight: 700; border-radius: 8px;}
 
 /* --- 7. Utilities --- */
 .hidden { display: none !important; }
