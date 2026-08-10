@@ -189,6 +189,14 @@
             opacity: 0.4;
             cursor: not-allowed;
         }
+
+        /* Force Show Dropdown Override to bypass external CSS conflicts */
+        #mdd.force-show {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
     </style>
 </head>
 <body>
@@ -552,26 +560,44 @@
         });
 
         ui.menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isVisible = ui.menuDropdown.style.display === 'block';
-            ui.menuDropdown.style.display = isVisible ? 'none' : 'block';
-            ui.menuBtn.setAttribute('aria-expanded', !isVisible);
+            e.preventDefault();
+            e.stopPropagation(); // Prevents external scripts from interfering
+            
+            // Checks if it's visible using standard styles or our force class
+            const isVisible = ui.menuDropdown.style.display === 'block' || ui.menuDropdown.classList.contains('force-show');
+            
+            if (isVisible) {
+                ui.menuDropdown.style.display = 'none';
+                ui.menuDropdown.classList.remove('force-show');
+                ui.menuBtn.setAttribute('aria-expanded', 'false');
+            } else {
+                ui.menuDropdown.style.display = 'block';
+                ui.menuDropdown.classList.add('force-show');
+                ui.menuBtn.setAttribute('aria-expanded', 'true');
+            }
         });
 
         document.addEventListener('click', (e) => {
             if (!ui.menuBtn.contains(e.target) && !ui.menuDropdown.contains(e.target)) {
                 ui.menuDropdown.style.display = 'none';
+                ui.menuDropdown.classList.remove('force-show');
+                ui.menuBtn.setAttribute('aria-expanded', 'false');
             }
         });
 
         ui.modeBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
                 if (btn.hasAttribute('disabled')) return; // Ignore if disabled
 
                 ui.modeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 setSearchMode(btn.dataset.mode);
+                
+                // Hide dropdown after clicking an option
                 ui.menuDropdown.style.display = 'none';
+                ui.menuDropdown.classList.remove('force-show');
+                ui.menuBtn.setAttribute('aria-expanded', 'false');
             });
         });
 
