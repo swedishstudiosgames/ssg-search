@@ -231,9 +231,9 @@
                         <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/btk.svg" alt="Store">
                         Store Search [Coming soon]
                     </button>
-                    <button type="button" data-mode="speech" disabled>
+                    <button type="button" data-mode="speech">
                         <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/mic.svg" alt="Speech">
-                        Speech to Text [Coming soon]
+                        Voice Search
                     </button>
                 </div>
             </div>
@@ -308,6 +308,16 @@
         };
 
         if (!ui.form) return;
+
+        // Detect if the user is on a mobile device (phones and tablets)
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobi/i.test(navigator.userAgent);
+        
+        // Disable Voice Search if on a desktop computer
+        const speechBtn = document.querySelector('button[data-mode="speech"]');
+        if (speechBtn && !isMobile) {
+            speechBtn.setAttribute('disabled', 'true');
+            speechBtn.innerHTML = `<img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/mic.svg" alt="Speech"> Voice Search [Mobile Only]`;
+        }
 
         // =========================================
         // 1. DIALOG MODAL SYSTEM
@@ -586,6 +596,10 @@
                     ui.textInput.setAttribute('required', '');
                     break;
                 case 'speech':
+                    if (!isMobile) {
+                        showMessage("Mobile Only", "Voice search is currently restricted to mobile devices.");
+                        break;
+                    }
                     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
                         startDictation();
                     } else {
@@ -676,21 +690,50 @@
 
         function startDictation() {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SpeechRecognition) {
+                showMessage("Not Supported", "Your browser does not support native speech recognition. Please try Chrome, Edge, or Safari.");
+                return;
+            }
+
             const recognition = new SpeechRecognition();
             
-            recognition.lang = 'en-US';
+            // Automatically use the device's native OS language setting
+            recognition.lang = navigator.language || 'en-US';
             recognition.interimResults = false;
             recognition.maxAlternatives = 1;
 
-            ui.textInput.placeholder = "Listening...";
-            recognition.start();
+            ui.textInput.placeholder = "Listening... (Speak now)";
+            
+            try {
+                recognition.start();
+            } catch (e) {
+                console.error("Speech start error:", e);
+            }
 
             recognition.onresult = (event) => {
-                ui.textInput.value = event.results[0][0].transcript;
+                const transcript = event.results[0][0].transcript;
+                ui.textInput.value = transcript;
                 toggleClearBtn(); 
+                ui.textInput.placeholder = "Search the internet...";
+                
+                // Auto-submit the search as soon as speech is recognized
+                if (transcript.trim().length > 0) {
+                    ui.form.submit();
+                }
             };
-            recognition.onspeechend = () => recognition.stop();
-            recognition.onerror = () => { ui.textInput.placeholder = "Error hearing voice."; }
+            
+            recognition.onspeechend = () => {
+                recognition.stop();
+                ui.textInput.placeholder = "Search the internet...";
+            };
+            
+            recognition.onerror = (event) => {
+                console.error("Microphone error:", event.error);
+                ui.textInput.placeholder = "Search the internet...";
+                if (event.error !== 'no-speech') {
+                    showMessage("Microphone Error", "Could not hear you. Please ensure your device has a working microphone and you have granted permission.");
+                }
+            };
         }
     });
     </script>
