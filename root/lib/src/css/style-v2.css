@@ -146,7 +146,7 @@ div.c {
     transition: background-color 0.2s;
 }
 
-#mdd button:hover { background-color: #3b3b3b; color: #fff; }
+#mdd button:hover { background-color: #3b3b3b; color: #fff; border-radius: 8px;}
 #mdd button.active { background-color: #333; color: var(--primary-blue); font-weight: 700; border-radius: 8px;}
 
 /* --- 7. Utilities --- */
