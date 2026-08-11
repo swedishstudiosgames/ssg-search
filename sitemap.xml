@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   
+   <!-- Main Domain: bexy.se -->
+   <url>
+      <loc>https://bexy.se/</loc>
+      <lastmod>2026-08-11</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <!-- Search Subdomain: search.bexy.se -->
+   <url>
+      <loc>https://search.bexy.se/</loc>
+      <lastmod>2026-08-11</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://search.bexy.se/about</loc>
+      <lastmod>2026-08-11</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://search.bexy.se/preferences</loc>
+      <lastmod>2026-08-11</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+   </url>
+   <url>
+      <loc>https://search.bexy.se/stats</loc>
+      <lastmod>2026-08-11</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.4</priority>
+   </url>
+
+</urlset>
