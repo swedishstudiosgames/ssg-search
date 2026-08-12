@@ -25,32 +25,32 @@ a { text-decoration: none; color: var(--text-main); transition: opacity 0.2s; }
 .ib.x svg { width: 20px; height: 20px; }
 
 /* --- Dropdowns (Menu & Autocomplete) --- */
-#mdd, .autocomplete-items { position: absolute; right: 0; background: var(--bg-dropdown); border: 1px solid var(--border-color); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(0,0,0,0.4); z-index: 10; display: none; overflow: hidden; }
+#mdd, .acis { position: absolute; right: 0; background: var(--bg-dropdown); border: 1px solid var(--border-color); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(0,0,0,0.4); z-index: 10; display: none; overflow: hidden; }
 #mdd { top: calc(100% + 8px); min-width: 180px; }
 #mdd.force-show { display: block !important; }
 #mdd button { color: #dedede; padding: 12px 16px; display: flex; align-items: center; gap: 10px; background: none; border: none; width: 100%; text-align: left; cursor: pointer; font-family: inherit; font-size: 14px; transition: background-color 0.2s; }
-#mdd button:hover, .autocomplete-item:hover { background-color: #3b3b3b; color: #fff; }
+#mdd button:hover, .aci:hover { background-color: #3b3b3b; color: #fff; }
 #mdd button.active { background-color: #333; color: var(--primary-blue); font-weight: 700; }
 #mdd button:disabled { opacity: 0.4; cursor: not-allowed; }
 
-.autocomplete-items { top: 100%; left: 0; margin-top: 8px; z-index: 99; }
-.autocomplete-item { padding: 14px 20px; cursor: pointer; color: #fff; font-size: 1rem; }
+.acis { top: 100%; left: 0; margin-top: 8px; z-index: 99; }
+.aci { padding: 14px 20px; cursor: pointer; color: #fff; font-size: 1rem; }
 
 /* --- Shortcuts Grid --- */
-#shortcuts-container { display: flex; justify-content: center; width: 100%; margin-top: 40px; }
-#shortcuts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 20px; width: 100%; max-width: 500px; }
-.shortcut-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px; border-radius: 12px; cursor: pointer; background: transparent; border: none; color: inherit; font-family: inherit; }
-.shortcut-btn:hover { background: rgba(128, 128, 128, 0.15); }
-.shortcut-btn img, .add-icon { width: 48px; height: 48px; border-radius: 50%; background: #fff; padding: 8px; margin-bottom: 10px; object-fit: contain; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+#scsc { display: flex; justify-content: center; width: 100%; margin-top: 40px; }
+#scsg { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 20px; width: 100%; max-width: 500px; }
+.scbtn { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px; border-radius: 12px; cursor: pointer; background: transparent; border: none; color: inherit; font-family: inherit; }
+.scbtn:hover { background: rgba(128, 128, 128, 0.15); }
+.scbtn img, .add-icon { width: 48px; height: 48px; border-radius: 50%; background: #fff; padding: 8px; margin-bottom: 10px; object-fit: contain; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 .add-icon { background: rgba(128, 128, 128, 0.2); display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: none; }
-.shortcut-btn span { font-size: 0.85rem; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; opacity: 0.9; }
+.scbtn span { font-size: 0.85rem; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; opacity: 0.9; }
 
 /* --- Modals --- */
 .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000; }
 .modal-box { background: #1e1e1e; border: 1px solid #333; border-radius: 16px; padding: 24px; width: 90%; max-width: 400px; box-shadow: 0 12px 32px rgba(0,0,0,0.5); }
 .modal-box h3 { margin: 0 0 15px 0; font-size: 1.25rem; }
 .modal-input { width: 100%; padding: 12px; margin-bottom: 15px; background: #2c2c2c; border: 1px solid #444; color: #fff; border-radius: 8px; box-sizing: border-box; font-family: inherit; }
-.modal-buttons { display: flex; justify-content: flex-end; gap: 12px; margin-top: 10px; }
+.modal-btns { display: flex; justify-content: flex-end; gap: 12px; margin-top: 10px; }
 .modal-btn { padding: 10px 18px; border: none; border-radius: 8px; cursor: pointer; background: #444; color: #fff; font-weight: bold; transition: opacity 0.2s; }
 .modal-btn:hover { opacity: 0.8; }
 .modal-btn.primary { background: #0078d7; }
@@ -62,9 +62,9 @@ footer a { color: var(--primary-blue); }
 
 /* --- Light Mode Optimizations --- */
 @media (prefers-color-scheme: light) {
-    .autocomplete-items, .modal-box { background: #fff; border-color: #ddd; color: #333; }
-    .autocomplete-item { color: #333; }
-    .autocomplete-item:hover, #mdd button:hover { background: #f0f0f0; color: #111; }
+    .acis, .modal-box { background: #fff; border-color: #ddd; color: #333; }
+    .aci { color: #333; }
+    .aci:hover, #mdd button:hover { background: #f0f0f0; color: #111; }
     .modal-input { background: #f9f9f9; border-color: #ccc; color: #333; }
     .modal-btn.secondary { background: #e0e0e0; color: #333; }
 }
