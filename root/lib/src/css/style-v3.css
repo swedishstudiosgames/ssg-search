@@ -57,7 +57,7 @@ a { text-decoration: none; color: var(--text-main); transition: opacity 0.2s; }
 .modal-btn.danger { background: #d32f2f; }
 
 /* --- Footer --- */
-footer { width: 100%; font-size: 14px; text-align: center; color: var(--text-muted); background: var(--bg-color); margin-top: auto; padding: 20px 0; }
+footer { width: 100%; font-size: 14px; color: var(--text-muted); background: var(--bg-color); margin-top: auto; padding: 20px 0; }
 footer a { color: var(--primary-blue); }
 
 /* --- Light Mode Optimizations --- */
