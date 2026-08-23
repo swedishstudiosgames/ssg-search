@@ -11,6 +11,10 @@
     <meta name="keywords" content="search engine, private search, secure search, open-source, search, privacy, engine, secure, security, secured, searxng, adfree, noai, no-ai, bex, bexy, bexey, beaxy, besy, besie, bexie, beaxie, besi, bexi, beaxi, beasi, beasie, bech, bechi, bechie, bechy">
     <meta name="robots" content="index, follow">
     
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://suggestqueries.google.com" crossorigin>
+    <link rel="preconnect" href="https://icons.duckduckgo.com" crossorigin>
+
     <!-- Canonical URL to prevent duplicate content issues -->
     <link rel="canonical" href="https://bexy.se/">
 
@@ -45,6 +49,8 @@
 
     <link rel="icon" type="image/svg" href="https://bexy.se/root/lib/assets/gfx/img/ico/favico/emblem/logo.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    
+    <!-- External CSS -->
     <link rel="stylesheet" href="https://bexy.se/root/lib/src/css/style-v3.css">
 </head>
 <body>
@@ -61,10 +67,10 @@
                     <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/clr.svg" alt="Clear">
                 </button>
                 <button type="submit" class="ib q" aria-label="Submit search" title="Search">
-                    <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/sok.svg" alt="Search">
+                    <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/sok.svg" alt="sok">
                 </button>
                 <button type="button" id="mb" class="ib m" aria-label="Search options" aria-haspopup="true" aria-expanded="false">
-                    <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/mom.svg" alt="Options">
+                    <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/mom.svg" alt="opt">
                 </button>
 
                 <div id="mdd">
@@ -75,7 +81,7 @@
                         <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/img.svg" alt="Image"> Image Search [Coming soon]
                     </button>
                     <button type="button" data-mode="store" disabled>
-                        <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/btk.svg" alt="Store"> Store Search [Coming soon]
+                        <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/btk.svg" alt="Item"> Product Search [Coming soon]
                     </button>
                     <button type="button" data-mode="speech">
                         <img class="i" src="https://bexy.se/root/lib/assets/gfx/img/ico/btn/mic.svg" alt="Speech"> Voice Search
@@ -90,7 +96,7 @@
     <footer><i>Powered by <a href="https://github.com/searxng/searxng" target="_blank" rel="noopener noreferrer">Searxng</a></i></footer>
 
     <!-- Modals -->
-    <div id="add-modal" class="modal-overlay">
+    <div id="add-modal" class="modal-overlay" style="display: none;">
         <div class="modal-box">
             <h3>Add Shortcut</h3>
             <form id="add-form">
@@ -108,7 +114,9 @@
         <div class="modal-box">
             <h3 id="msg-title">Message</h3>
             <p id="msg-text"></p>
-            <div class="modal-buttons"><button type="button" class="modal-btn primary close-modal">OK</button></div>
+            <div class="modal-buttons">
+                <button type="button" class="modal-btn primary close-modal">OK</button>
+            </div>
         </div>
     </div>
 
@@ -122,6 +130,8 @@
             </div>
         </div>
     </div>
+
+    <!-- External JS -->
     <script src="https://bexy.se/root/lib/src/js/temp.js" defer crossorigin="anonymous"></script>
 </body>
 </html>
