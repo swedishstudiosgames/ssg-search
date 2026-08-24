@@ -1,0 +1,2 @@
+github: swedishstudiosgames
+liberapay: swedishstudiosgames
