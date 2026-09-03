@@ -607,6 +607,14 @@
           "url": "https://www.adlibris.com/se"
         },
         {
+          "retailer": "Akademibokhandeln",
+          "url": "https://www.akademibokhandeln.se"
+        },
+        {
+          "retailer": "Albrekts Guld",
+          "url": "https://www.albrektsguld.se"
+        },
+        {
           "retailer": "Alina",
           "url": "https://www.alina.se"
         },
@@ -623,12 +631,28 @@
           "url": "https://www.apotea.se"
         },
         {
+          "retailer": "Apotek Hjärtat",
+          "url": "https://www.apotekhjartat.se"
+        },
+        {
+          "retailer": "Apoteket",
+          "url": "https://www.apoteket.se"
+        },
+        {
+          "retailer": "Arken Zoo",
+          "url": "https://www.arkenzoo.se"
+        },
+        {
           "retailer": "Babyland",
           "url": "https://www.babyland.se"
         },
         {
           "retailer": "Bauhaus Sweden",
           "url": "https://www.bauhaus.se"
+        },
+        {
+          "retailer": "Bik Bok",
+          "url": "https://bikbok.com/sv/"
         },
         {
           "retailer": "Biltema Sweden",
@@ -643,6 +667,10 @@
           "url": "https://www.boozt.com"
         },
         {
+          "retailer": "Brothers",
+          "url": "https://www.brothers.se"
+        },
+        {
           "retailer": "Bygghemma",
           "url": "https://www.bygghemma.se"
         },
@@ -651,20 +679,88 @@
           "url": "https://www.byggmax.se"
         },
         {
+          "retailer": "CDON",
+          "url": "https://cdon.se"
+        },
+        {
+          "retailer": "Carlings",
+          "url": "https://carlings.com/sv/"
+        },
+        {
+          "retailer": "Cervera",
+          "url": "https://www.cervera.se"
+        },
+        {
+          "retailer": "City Gross",
+          "url": "https://www.citygross.se"
+        },
+        {
           "retailer": "Clas Ohlson",
           "url": "https://www.clasohlson.se"
+        },
+        {
+          "retailer": "Colorama",
+          "url": "https://www.colorama.se"
         },
         {
           "retailer": "ComputerSalg",
           "url": "https://www.computersalg.se"
         },
         {
+          "retailer": "Coop Sweden",
+          "url": "https://www.coop.se"
+        },
+        {
+          "retailer": "Cubus",
+          "url": "https://cubus.com/sv/"
+        },
+        {
+          "retailer": "Deichmann",
+          "url": "https://www.deichmann.com/sv-se"
+        },
+        {
+          "retailer": "DinSko",
+          "url": "https://www.dinsko.se"
+        },
+        {
+          "retailer": "Dressmann",
+          "url": "https://dressmann.com/sv/"
+        },
+        {
           "retailer": "Dustin Home",
           "url": "https://www.dustinhome.se"
         },
         {
+          "retailer": "Ecco",
+          "url": "https://se.ecco.com"
+        },
+        {
+          "retailer": "Eko",
+          "url": "https://www.ekostormarknad.se"
+        },
+        {
           "retailer": "Elgiganten",
           "url": "https://www.elgiganten.se"
+        },
+        {
+          "retailer": "Flying Tiger Copenhagen",
+          "url": "https://flyingtiger.com/sv-se"
+        },
+        {
+          "retailer": "Gina Tricot",
+          "url": "https://www.ginatricot.com/se"
+        },
+        {
+          "retailer": "Glitter",
+          "url": "https://glitter.se"
+        },
+        {
+          "retailer": "Granit",
+          "url": "https://www.granit.com"
+        },
+        {
+          "retailer": "Guldfynd",
+          "url": "https://www.guldfynd.se"
         },
         {
           "retailer": "Gymgrossisten",
@@ -675,6 +771,10 @@
           "url": "https://www.hm.com"
         },
         {
+          "retailer": "Hemköp",
+          "url": "https://www.hemkop.se"
+        },
+        {
           "retailer": "Hemtex",
           "url": "https://www.hemtex.se"
         },
@@ -683,12 +783,36 @@
           "url": "https://www.hornbach.se"
         },
         {
+          "retailer": "Hunkemöller",
+          "url": "https://www.hunkemoller.se"
+        },
+        {
+          "retailer": "ICA",
+          "url": "https://www.ica.se"
+        },
+        {
           "retailer": "Ikea Sweden",
           "url": "https://www.ikea.se"
         },
         {
+          "retailer": "Indiska",
+          "url": "https://www.indiska.com/se"
+        },
+        {
           "retailer": "Inet",
           "url": "https://www.inet.se"
+        },
+        {
+          "retailer": "Intersport Sweden",
+          "url": "https://www.intersport.se"
+        },
+        {
+          "retailer": "Jack & Jones",
+          "url": "https://www.jackjones.com/sv-se"
+        },
+        {
+          "retailer": "JD Sports",
+          "url": "https://www.jdsports.se"
         },
         {
           "retailer": "Jollyroom",
@@ -699,8 +823,20 @@
           "url": "https://www.jula.se"
         },
         {
+          "retailer": "Jysk Sweden",
+          "url": "https://www.jysk.se"
+        },
+        {
           "retailer": "K-Rauta Sweden",
           "url": "https://www.k-rauta.se"
+        },
+        {
+          "retailer": "KappAhl",
+          "url": "https://www.kappahl.com/sv-SE"
+        },
+        {
+          "retailer": "Kicks",
+          "url": "https://www.kicks.se"
         },
         {
           "retailer": "Kjell & Company",
@@ -711,8 +847,44 @@
           "url": "https://www.komplett.se"
         },
         {
+          "retailer": "Kronans Apotek",
+          "url": "https://www.kronansapotek.se"
+        },
+        {
+          "retailer": "Lager 157",
+          "url": "https://www.lager157.com/sv-se/"
+        },
+        {
+          "retailer": "Lagerhaus",
+          "url": "https://www.lagerhaus.se"
+        },
+        {
+          "retailer": "Lekia",
+          "url": "https://www.lekia.se"
+        },
+        {
+          "retailer": "Leklust",
+          "url": "https://www.leklust.se"
+        },
+        {
+          "retailer": "Levi's",
+          "url": "https://www.levi.com/SE/sv_SE"
+        },
+        {
+          "retailer": "Lidl Sweden",
+          "url": "https://www.lidl.se"
+        },
+        {
           "retailer": "Lindex Sweden",
           "url": "https://www.lindex.com"
+        },
+        {
+          "retailer": "Lyko",
+          "url": "https://www.lyko.com/sv"
+        },
+        {
+          "retailer": "MQ Marqet",
+          "url": "https://www.marqetstores.se"
         },
         {
           "retailer": "MaxGaming",
@@ -727,8 +899,32 @@
           "url": "https://www.mio.se"
         },
         {
+          "retailer": "Naturkompaniet",
+          "url": "https://www.naturkompaniet.se"
+        },
+        {
           "retailer": "NetOnNet",
           "url": "https://www.netonnet.se"
+        },
+        {
+          "retailer": "New Yorker",
+          "url": "https://www.newyorker.de/se/"
+        },
+        {
+          "retailer": "Normal",
+          "url": "https://www.normal.se"
+        },
+        {
+          "retailer": "Panduro",
+          "url": "https://panduro.com/sv-se"
+        },
+        {
+          "retailer": "Plantagen",
+          "url": "https://www.plantagen.se"
+        },
+        {
+          "retailer": "Polarn O. Pyret",
+          "url": "https://www.polarnopyret.se"
         },
         {
           "retailer": "Power",
@@ -739,20 +935,108 @@
           "url": "https://www.proshop.se"
         },
         {
+          "retailer": "Rituals",
+          "url": "https://www.rituals.com/sv-se/home"
+        },
+        {
           "retailer": "Rusta",
           "url": "https://www.rusta.com"
+        },
+        {
+          "retailer": "Scorett",
+          "url": "https://www.scorett.se"
+        },
+        {
+          "retailer": "Sephora",
+          "url": "https://www.sephora.se"
+        },
+        {
+          "retailer": "Smarteyes",
+          "url": "https://www.smarteyes.se"
+        },
+        {
+          "retailer": "Specsavers",
+          "url": "https://www.specsavers.se"
+        },
+        {
+          "retailer": "Stadium",
+          "url": "https://www.stadium.se"
+        },
+        {
+          "retailer": "Synsam",
+          "url": "https://www.synsam.se"
+        },
+        {
+          "retailer": "Systembolaget",
+          "url": "https://www.systembolaget.se"
+        },
+        {
+          "retailer": "Tele2",
+          "url": "https://www.tele2.se"
+        },
+        {
+          "retailer": "Telenor",
+          "url": "https://www.telenor.se"
+        },
+        {
+          "retailer": "Telia",
+          "url": "https://www.telia.se"
         },
         {
           "retailer": "Teknikdelar",
           "url": "https://www.teknikdelar.se"
         },
         {
+          "retailer": "The Body Shop",
+          "url": "https://www.thebodyshop.se"
+        },
+        {
+          "retailer": "Tre",
+          "url": "https://www.tre.se"
+        },
+        {
+          "retailer": "Ur&Penn",
+          "url": "https://uropenn.se"
+        },
+        {
+          "retailer": "Vero Moda",
+          "url": "https://www.veromoda.com/sv-se"
+        },
+        {
           "retailer": "Webhallen",
           "url": "https://www.webhallen.com"
         },
         {
+          "retailer": "Willys",
+          "url": "https://www.willys.se"
+        },
+        {
+          "retailer": "XL Zoo",
+          "url": "https://www.xl-zoo.se"
+        },
+        {
+          "retailer": "XXL",
+          "url": "https://www.xxl.se"
+        },
+        {
           "retailer": "Zalando Sweden",
           "url": "https://www.zalando.se"
+        },
+        {
+          "retailer": "Zara",
+          "url": "https://www.zara.com/se/"
+        },
+        {
+          "retailer": "Åhléns",
+          "url": "https://www.ahlens.se"
+        },
+        {
+          "retailer": "Öbergs",
+          "url": "https://www.obergs.se"
+        },
+        {
+          "retailer": "ÖoB",
+          "url": "https://www.oob.se"
         }
       ]
     },
